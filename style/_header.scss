@@ -1,25 +1,29 @@
 nav {
-  height: 2.75em;
+  height: 5.93em;
   width: 100%;
-  background: red;
+  //background: red;
   display: flex;
   justify-content: space-between;
 }
 
 .line-color {
   height: 0.3em;
-  background-color: $royal-blue-color;
+  background-color: $royal_blue_color;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 5.62em;
   padding: 0;
 }
 
 .logo {
-  margin-left: 70%;
+  margin-top: 1.81em;
+  margin-left: 1.37em;
+  margin-bottom: 1.06em;
+  width: 3.05em;
+  height: 3.05em;
 }
 
 .menu-conten {
@@ -27,8 +31,8 @@ nav {
   width: 100%;
   height: 0em;
   top: 2.75em;
-  background: #0000ec;
-  text-align: left;
+  background: $royal-blue-color-hover;
+  text-align: center;
   transition: all 0.5;
 }
 
@@ -38,11 +42,12 @@ nav {
   margin-left: 5%;
   margin-top: 7%;
   a {
-    color: #ffffff;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    border-bottom: 0.06em solid $white-color;
+    padding-bottom: 0.75em;
   }
 }
-
+/*
 .menu-conten li a:active {
   color: rgba(6, 10, 36, 0.56);
   text-decoration: line-through;
@@ -53,44 +58,67 @@ nav {
   color: #00f3bb;
   text-decoration: line-through;
   transition: 0.5s;
-}
+}*/
 
 .burger-btn {
-  display: block;
-  font-size: 1.5em;
-  color: black;
-  float: right;
-  line-height: 1.9em;
-  margin-right: 5%;
+  //display: block;
+  //font-size: 1.5em;
+  //color: black;
+  //float: right;
+  //line-height: 1.9em;
+  //margin-right: 5%;
+  //display: flex;
+  //align-items: center;
   cursor: pointer;
+
+  img {
+    margin-top: 2.93em;
+    margin-right: 1.62em;
+    margin-bottom: 2.12em;
+    width: 0.93em;
+    height: 0.87em;
+  }
 }
 
 #check {
   display: none;
 }
 
+#check:checked ~ .burger-btn {
+  img {
+    content: url("/assets/img/close.svg");
+  }
+}
+
 #check:checked ~ .menu-conten {
-  height: 14em;
+  height: 100%;
+  margin-top: 3.53em;
+  .crear-gifo {
+    display: none;
+  }
 }
 
 #check:checked ~ .menu-conten li {
   opacity: 1;
 }
+
 @media screen and (min-width: 768px) {
-  .logo-container {
-    margin-left: 1.4em;
-  }
   nav {
-    height: 4em;
-    padding-right: 2em;
+    height: 5.62em;
   }
   .burger-btn {
     display: none;
   }
 
+  .logo-container {
+    margin-left: 10.83%;
+  }
   .logo {
-    width: 1.8em;
-    height: 1.8em;
+    //width: 3.69em;
+    //height: 3.69em;
+    margin-top: 1.25%;
+    margin-bottom: 0.9%;
+    margin-left: 0em;
   }
   .menu-conten {
     position: relative;
@@ -99,8 +127,18 @@ nav {
     background: none;
     float: right;
     text-align: right;
-    margin-right: 0;
+    margin-right: 5.83%;
+    margin-top: 2.5%;
+    margin-bottom: 2.64%;
+    margin-left: 11.81%;
     transition: none;
+    display: flex;
+    justify-content: space-around;
+    //align-items: center;
+    .crear-gifo {
+      margin-top: 1.25%;
+      margin-bottom: 1.25%;
+    }
   }
   .menu-conten li {
     display: inline-block;
@@ -109,34 +147,67 @@ nav {
     margin-top: 0;
     margin-left: 1em;
     transition: none;
+
     a {
-      color: #060a24;
       text-transform: uppercase;
+      color: $royal-blue-color;
+      border: none;
     }
+  }
+
+  .menu-conten li a:hover {
+    text-decoration: underline;
+    text-decoration-color: $cyan-color;
+    text-decoration-thickness: 0.12em;
+    transition: 0.5s;
+  }
+  .menu-conten li a:active {
+    color: $cylindrical-color;
+    letter-spacing: 0;
+    text-align: center;
+  }
+  .crear-gifo:hover {
+    content: url("/assets/img/CTA-crear-gifo-hover.svg");
+  }
+  .crear-gifo:active {
+    content: url("/assets/img/CTA-crear-gifo-active.svg");
   }
 }
 
 @media screen and (min-width: 1023px) {
-  .logo-container {
-    margin-left: 1.6em;
-  }
-
-  nav {
-    height: 5em;
-    padding-right: 3em;
-  }
-
-  .logo {
-    width: 2em;
-    height: 2em;
-  }
   .menu-conten {
-    height: 5em;
-    margin-right: 1.6em;
+    .crear-gifo {
+      margin-top: -1.3em;
+    }
+
+    li {
+      display: inline-flex;
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .logo-container {
+    margin-left: 9.75em;
+    .logo {
+      width: 3.69em;
+      height: 3.69em;
+    }
   }
 
-  .menu-conten li {
-    line-height: 5em;
-    margin-left: 3em;
+  .menu-conten {
+    margin-top: 1.5%;
+    margin-right: 9.75em;
+    margin-left: 36.36em;
+    .crear-gifo {
+      margin-top: -1.3em;
+    }
+
+    li {
+      display: inline-flex;
+      a {
+        padding-bottom: 0em;
+      }
+    }
   }
 }

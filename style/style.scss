@@ -1,3 +1,10 @@
+$royal-blue-color: #572ee5;
+$royal-blue-color-hover: rgba(87, 46, 229, 0.9);
+$white-color: #ffffff;
+$cyan-color: #5ed7c6;
+$cylindrical-color: #9cafc3;
+$font-montserrat: "Montserrat", sans-serif;
+
 @import "header";
 
 * {
@@ -8,4 +15,11 @@
   box-sizing: border-box;
 }
 
-$royal-blue-color: #572ee5;
+.text-menu-conten-light {
+  font-family: $font-montserrat;
+  font-weight: bold;
+  font-size: 0.93em;
+  color: $white-color;
+  line-height: 3.75em;
+  width: 100%;
+}
