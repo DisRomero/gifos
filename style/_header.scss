@@ -1,14 +1,30 @@
-nav {
-  height: 5.93em;
-  width: 100%;
-  //background: red;
-  display: flex;
-  justify-content: space-between;
+body {
+  transition: 1s ease all;
+  //dark mode
+  &.dark-mode {
+    background-color: $body-dark-color;
+  }
 }
 
 .line-color {
   height: 0.3em;
-  background-color: $royal_blue_color;
+  background-color: $line-color;
+  //dark mode
+  body.dark-mode & {
+    background-color: $black-color;
+  }
+}
+
+nav {
+  height: 5.93em;
+  width: 100%;
+  background: lightblue;
+  display: flex;
+  justify-content: space-between;
+  //dark mode
+  body.dark-mode & {
+    background-color: $body-dark-color;
+  }
 }
 
 .logo-container {
@@ -24,6 +40,10 @@ nav {
   margin-bottom: 1.06em;
   width: 3.05em;
   height: 3.05em;
+  //dark mode
+  body.dark-mode & {
+    content: url("/assets/img/logo-mobile-modo-noct.svg");
+  }
 }
 
 .menu-conten {
@@ -31,44 +51,40 @@ nav {
   width: 100%;
   height: 0em;
   top: 2.75em;
-  background: $royal-blue-color-hover;
+  background: $menu-mobile-color-hover;
   text-align: center;
-  transition: all 0.5;
+  //-----------------transition: all 0.5;
+  //dark mode
+  body.dark-mode & {
+    background: $black-color;
+  }
+
+  li {
+    opacity: 0;
+    //-----------------transition: all 0.5;
+    margin-left: 5%;
+    margin-top: 7%;
+  }
 }
 
 .menu-conten li {
-  opacity: 0;
-  transition: all 0.5;
-  margin-left: 5%;
-  margin-top: 7%;
-  a {
+  #color-switch {
+    display: none;
+  }
+  a,
+  label {
     text-transform: capitalize;
     border-bottom: 0.06em solid $white-color;
     padding-bottom: 0.75em;
   }
+  label {
+    //dark mode-------------------------------------------
+    body.dark-mode &::after {
+      //content: "hi";
+    }
+  }
 }
-/*
-.menu-conten li a:active {
-  color: rgba(6, 10, 36, 0.56);
-  text-decoration: line-through;
-  transition: 0.5s;
-}
-
-.menu-conten li a:hover {
-  color: #00f3bb;
-  text-decoration: line-through;
-  transition: 0.5s;
-}*/
-
 .burger-btn {
-  //display: block;
-  //font-size: 1.5em;
-  //color: black;
-  //float: right;
-  //line-height: 1.9em;
-  //margin-right: 5%;
-  //display: flex;
-  //align-items: center;
   cursor: pointer;
 
   img {
@@ -77,6 +93,10 @@ nav {
     margin-bottom: 2.12em;
     width: 0.93em;
     height: 0.87em;
+    //dark mode
+    body.dark-mode & {
+      content: url("/assets/img/burger-modo-noct.svg");
+    }
   }
 }
 
@@ -87,6 +107,10 @@ nav {
 #check:checked ~ .burger-btn {
   img {
     content: url("/assets/img/close.svg");
+    //dark mode
+    body.dark-mode & {
+      content: url("/assets/img/close-modo-noct.svg");
+    }
   }
 }
 
@@ -114,8 +138,6 @@ nav {
     margin-left: 10.83%;
   }
   .logo {
-    //width: 3.69em;
-    //height: 3.69em;
     margin-top: 1.25%;
     margin-bottom: 0.9%;
     margin-left: 0em;
@@ -131,57 +153,87 @@ nav {
     margin-top: 2.5%;
     margin-bottom: 2.64%;
     margin-left: 11.81%;
-    transition: none;
+    //transition: none;
     display: flex;
     justify-content: space-around;
-    //align-items: center;
+    //dark mode
+    body.dark-mode & {
+      background: none;
+    }
     .crear-gifo {
       margin-top: 1.25%;
       margin-bottom: 1.25%;
+      //dark mode
+      body.dark-mode & {
+        content: url("/assets/img/CTA-crear-gifo-hover-modo-noc.svg");
+      }
     }
   }
   .menu-conten li {
     display: inline-block;
     opacity: 1;
     line-height: 4em;
-    margin-top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 1em;
-    transition: none;
+    //transition: none;
 
-    a {
+    a,
+    label {
       text-transform: uppercase;
-      color: $royal-blue-color;
+      color: $line-color;
       border: none;
+      //dark mode
+      body.dark-mode & {
+        color: $white-color;
+      }
     }
   }
+}
 
-  .menu-conten li a:hover {
-    text-decoration: underline;
-    text-decoration-color: $cyan-color;
-    text-decoration-thickness: 0.12em;
-    transition: 0.5s;
+.menu-conten li a:hover,
+.menu-conten li label:hover {
+  text-decoration: underline;
+  text-decoration-color: $link-hover-color;
+  text-decoration-thickness: 0.12em;
+  //-----------------transition: 0.5s;
+}
+.menu-conten li a:active,
+.menu-conten li label:active {
+  //--------------------------
+  color: $link-active-color;
+  letter-spacing: 0;
+  text-align: center;
+  //dark mode
+  body.dark-mode & {
+    color: $link-active-color;
   }
-  .menu-conten li a:active {
-    color: $cylindrical-color;
-    letter-spacing: 0;
-    text-align: center;
+}
+.crear-gifo:hover {
+  content: url("/assets/img/CTA-crear-gifo-hover.svg");
+  //dark mode
+  body.dark-mode & {
+    content: url("/assets/img/CTA-crear-gifo-hover-modo-noc.svg");
   }
-  .crear-gifo:hover {
-    content: url("/assets/img/CTA-crear-gifo-hover.svg");
-  }
-  .crear-gifo:active {
-    content: url("/assets/img/CTA-crear-gifo-active.svg");
+}
+.crear-gifo:active {
+  content: url("/assets/img/CTA-crear-gifo-active.svg");
+  //dark mode
+  body.dark-mode & {
+    content: url("/assets/img/CTA-crear-gifo-active-modo-noc.svg");
   }
 }
 
 @media screen and (min-width: 1023px) {
   .menu-conten {
+    justify-content: flex-end;
     .crear-gifo {
       margin-top: -1.3em;
     }
 
     li {
       display: inline-flex;
+      margin-left: 3.5em;
     }
   }
 }
@@ -198,16 +250,13 @@ nav {
   .menu-conten {
     margin-top: 1.5%;
     margin-right: 9.75em;
-    margin-left: 36.36em;
+    margin-left: 20em;
     .crear-gifo {
       margin-top: -1.3em;
     }
 
     li {
       display: inline-flex;
-      a {
-        padding-bottom: 0em;
-      }
     }
   }
 }
