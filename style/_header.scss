@@ -77,12 +77,6 @@ nav {
     border-bottom: 0.06em solid $white-color;
     padding-bottom: 0.75em;
   }
-  label {
-    //dark mode-------------------------------------------
-    body.dark-mode &::after {
-      //content: "hi";
-    }
-  }
 }
 .burger-btn {
   cursor: pointer;
@@ -200,7 +194,6 @@ nav {
 }
 .menu-conten li a:active,
 .menu-conten li label:active {
-  //--------------------------
   color: $link-active-color;
   letter-spacing: 0;
   text-align: center;
@@ -228,7 +221,7 @@ nav {
   .menu-conten {
     justify-content: flex-end;
     .crear-gifo {
-      margin-top: -1.3em;
+      margin-top: -0.3em;
     }
 
     li {
@@ -251,9 +244,6 @@ nav {
     margin-top: 1.5%;
     margin-right: 9.75em;
     margin-left: 20em;
-    .crear-gifo {
-      margin-top: -1.3em;
-    }
 
     li {
       display: inline-flex;
