@@ -9,6 +9,7 @@ $font-montserrat: "Montserrat", sans-serif;
 
 @import "header";
 @import "search";
+@import "trending";
 
 * {
   padding: 0;
@@ -32,5 +33,6 @@ $font-montserrat: "Montserrat", sans-serif;
   font-family: $font-montserrat;
   font-weight: bold;
   font-size: 1.56em;
-  line-height: 1.2em;
+  line-height: 1.56em;
+  text-align: center;
 }

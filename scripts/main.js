@@ -46,8 +46,8 @@ const btnSearch = document.getElementById('btn-form-search');
 const q = 'smile';
 const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 //const api_key = 'M56ORmffhkS4OWzdIE3ZPfFQXWSjF30N';
-const api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&${q}&limit=1`;
-/////////////////validate if the function exection good o no!!!!
+const api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=6`;
+
 
 btnSearch.addEventListener('click', (event)=>{
   event.preventDefault();
@@ -84,9 +84,9 @@ fetch(trending)
   .then((data) => {
     console.log(data);
     //console.log('META', data.meta)
-    let url_img = data.data[0].images.downsized.url;
+    let url_img = data.data[0].images.downsized_large.url;
     //console.log(url_img);
     let element = document.getElementById("test");
-    element.innerHTML = '<img src="' + url_img + '  height="200" width="200"/>';
+   // element.innerHTML = '<img src="' + url_img + '  height="200" width="200"/>';
   })
   .catch((err) => console.log(err));
