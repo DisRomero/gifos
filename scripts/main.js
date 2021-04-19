@@ -1,19 +1,3 @@
-const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
-const trending =
-  "https://api.giphy.com/v1/gifs/trending?api_key=I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP&limit=1";
-
-fetch(trending)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    //console.log('META', data.meta)
-    let url_img = data.data[0].images.downsized.url;
-    console.log(url_img);
-    let element = document.getElementById("test");
-    element.innerHTML = '<img src="' + url_img + '  height="200" width="200"/>';
-  })
-  .catch((err) => console.log(err));
-
 //////////////////dark-mode
 const colorSwitch = document.getElementById("color-switch");
 
@@ -55,4 +39,54 @@ if(localStorage.getItem('dark-mode') === 'true'){
   darkModeOff();
 }
 
+//fetch search input
+const inputSearch = document.getElementById('input-form-search').value;
+const btnSearch = document.getElementById('btn-form-search');
 
+const q = 'smile';
+const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
+//const api_key = 'M56ORmffhkS4OWzdIE3ZPfFQXWSjF30N';
+const api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&${q}&limit=1`;
+/////////////////validate if the function exection good o no!!!!
+
+btnSearch.addEventListener('click', (event)=>{
+  event.preventDefault();
+  sendApiRequest();
+})
+
+function sendApiRequest(){
+  fetch(api_search).then(function(respondeSearch){
+    console.log(respondeSearch);
+    return respondeSearch.json();
+    
+  }).then(function(json){
+    console.log(json)
+    json.data.forEach(function(obj){
+      console.log(obj.images.downsized.url);
+    })
+  }).catch(function(err){
+    console.log(err.message);
+  })
+}
+
+//fetch title trending
+
+
+
+/////fetch gif treding
+
+
+const trending =
+`https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=1`;
+
+fetch(trending)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    //console.log('META', data.meta)
+    let url_img = data.data[0].images.downsized.url;
+    //console.log(url_img);
+    let element = document.getElementById("test");
+    element.innerHTML = '<img src="' + url_img + '  height="200" width="200"/>';
+  })
+  .catch((err) => console.log(err));

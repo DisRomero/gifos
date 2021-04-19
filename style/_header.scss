@@ -18,7 +18,6 @@ body {
 nav {
   height: 5.93em;
   width: 100%;
-  background: lightblue;
   display: flex;
   justify-content: space-between;
   //dark mode
@@ -53,7 +52,7 @@ nav {
   top: 2.75em;
   background: $menu-mobile-color-hover;
   text-align: center;
-  //-----------------transition: all 0.5;
+
   //dark mode
   body.dark-mode & {
     background: $black-color;
@@ -61,7 +60,6 @@ nav {
 
   li {
     opacity: 0;
-    //-----------------transition: all 0.5;
     margin-left: 5%;
     margin-top: 7%;
   }
@@ -147,7 +145,6 @@ nav {
     margin-top: 2.5%;
     margin-bottom: 2.64%;
     margin-left: 11.81%;
-    //transition: none;
     display: flex;
     justify-content: space-around;
     //dark mode
@@ -170,8 +167,6 @@ nav {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1em;
-    //transition: none;
-
     a,
     label {
       text-transform: uppercase;
@@ -190,7 +185,6 @@ nav {
   text-decoration: underline;
   text-decoration-color: $link-hover-color;
   text-decoration-thickness: 0.12em;
-  //-----------------transition: 0.5s;
 }
 .menu-conten li a:active,
 .menu-conten li label:active {

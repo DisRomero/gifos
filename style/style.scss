@@ -8,6 +8,7 @@ $body-dark-color: #37383c;
 $font-montserrat: "Montserrat", sans-serif;
 
 @import "header";
+@import "search";
 
 * {
   padding: 0;
@@ -24,4 +25,12 @@ $font-montserrat: "Montserrat", sans-serif;
   color: $white-color;
   line-height: 3.75em;
   width: 100%;
+}
+
+.text-body {
+  color: $line-color;
+  font-family: $font-montserrat;
+  font-weight: bold;
+  font-size: 1.56em;
+  line-height: 1.2em;
 }
