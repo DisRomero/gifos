@@ -103,8 +103,9 @@ fetch(trending)
     //console.log('META', data.meta)
     let url_img = data.data[0].images.downsized_large.url;
     //console.log(url_img);
-    let element = document.getElementById("test");
-    // element.innerHTML = '<img src="' + url_img + '  height="200" width="200"/>';
+    let imgGifo = document.createElement("img");
+    imgGifo.src = url_img;
+    //sdocument.getElementById("test").appendChild(imgGifo);
   })
   .catch((err) => console.log(err));
 

@@ -5,7 +5,7 @@
   flex-direction: column;
   h2 {
     width: 12.75em;
-    margin-top: 1.93em;
+    margin-top: 1.23em;
     font-size: 1em;
     text-transform: capitalize;
     //dark-mode
@@ -16,10 +16,9 @@
   p {
     display: flex;
     flex-direction: row;
-    //margin-top: 0.12em;
-    //margin-bottom: 2.81em;
-    //width: 14.06em;
+    margin-bottom: 2.81em;
     font-size: 0.57em;
+    width: 90%;
     font-weight: normal;
     line-height: normal;
     //dark-mode
@@ -33,12 +32,12 @@
   .trending-info {
     h2 {
       width: 5.68em;
-      margin-top: 4.56em;
+      margin-top: 3em;
     }
     p {
       width: 25.12em;
       margin-top: 0.43em;
-      margin-bottom: 5.87em;
+      margin-bottom: 6.7em;
     }
   }
 }
