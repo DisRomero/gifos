@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!--fuente Montserrat-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="line-color"></div>
+      <nav>
+        <div class="logo-container">
+          <a href="index.html">
+            <img class="logo" src="assets/img/logo-mobile.svg" alt="logo" />
+          </a>
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="check" class="burger-btn">
+          <img src="assets/img/burger.svg" alt="menu" />
+        </label>
+        <ul class="menu-conten">
+          <li>
+            <input type="checkbox" id="color-switch" />
+            <label
+              for="color-switch"
+              id="text-color-switch"
+              class="text-menu-conten"
+              >modo nocturno</label
+            >
+          </li>
+          <li>
+            <a class="text-menu-conten" href="favorite.html">favoritos</a>
+          </li>
+          <li>
+            <a class="text-menu-conten" href="myGifo.html">mis GIFOS</a>
+          </li>
+          <li>
+            <a href="createGifos.html">
+              <img
+                class="crear-gifo"
+                src="assets/img/button-crear-gifo.svg"
+                alt="crear-gifo"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section><h2>Favoritos</h2></section>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
