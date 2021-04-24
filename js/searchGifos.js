@@ -36,3 +36,8 @@ export function sendApiRequest() {
       console.log(err.message);
     });
 }
+
+
+////////https://www.youtube.com/watch?v=bRdjEpodiaQ&t=222s&ab_channel=TheTechTeam
+///////https://www.youtube.com/watch?v=1iysNUrI3lw&t=78s&ab_channel=TraversyMedia
+///////https://www.youtube.com/watch?v=WI0aCIEYXvw&ab_channel=J%26GProyectosWeb
