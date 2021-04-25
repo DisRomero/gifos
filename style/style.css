@@ -298,6 +298,7 @@ body.dark-mode .search-gifos .title-search-gifos {
 }
 
 .form-search {
+  width: 17.5em;
   border: 0.06em solid #572ee5;
   border-radius: 1.68em;
   width: 17.87em;
@@ -307,6 +308,8 @@ body.dark-mode .search-gifos .title-search-gifos {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body.dark-mode .form-search {
@@ -341,6 +344,24 @@ body.dark-mode .form-search button {
 
 body.dark-mode .form-search img {
   content: url("/assets/img/icon-search-modo-noct.svg");
+}
+
+.form-search .ul-form-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.form-search .ul-form-search li {
+  text-align: left;
 }
 
 @media screen and (min-width: 768px) {
