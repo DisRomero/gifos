@@ -23,7 +23,7 @@ fetch(trendingTitles)
     });
   })
   .catch(function (err) {
-    console.error("The API responde of Trending Titles display an error");
+   console.error("The API responde of Trending Titles display an error");
     console.log(err.message);
   });
 
@@ -44,6 +44,4 @@ fetch(trending)
   .catch((err) => console.log(err));
 
 ////////search responde
-const sectionTag = (document.getElementById(
-  "search-gifos-responde"
-).style.display = "none");
+const sectionTag = (document.getElementById("search-gifos-responde").style.display = "none");

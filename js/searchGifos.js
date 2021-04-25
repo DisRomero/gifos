@@ -47,14 +47,17 @@ const searchGifos = async searchText => {
   //console.log(gifos);
   //data.data[0].name
   gifos.data.forEach(function (obj){
-    //console.log(obj.name);
+    console.log(obj.name);
   
+    
 let nameSuggestion = obj.name;
 let tag = document.createElement('li');
 let textSuggestion =document.createTextNode(nameSuggestion);
 tag.appendChild(textSuggestion);
 let tagForm = document.getElementById('ul-form-search');
 tagForm.appendChild(tag);
+
+
 if(searchText.length === 0){
   tag.style.display="none";
 }
