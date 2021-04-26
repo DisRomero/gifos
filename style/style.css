@@ -467,7 +467,7 @@ body.dark-mode .ul-form-search {
 .trending-info h2 {
   width: 12.75em;
   margin-top: 1.23em;
-  font-size: 1em;
+  font-size: 0.8em;
   text-transform: capitalize;
 }
 
@@ -527,6 +527,147 @@ body.dark-mode .trending-info p {
 }
 
 */
+.trending-gifos {
+  background-color: #f3f5f8;
+  padding-top: 2.87em;
+  height: 26.87em;
+}
+
+body.dark-mode .trending-gifos {
+  background-color: #222326;
+}
+
+.trending-gifos h2 {
+  text-transform: capitalize;
+  width: 100%;
+  font-size: 1.25em;
+  line-height: 1.87em;
+  margin-bottom: 0.43em;
+}
+
+body.dark-mode .trending-gifos h2 {
+  color: #ffffff;
+}
+
+.trending-gifos h2 span {
+  text-transform: uppercase;
+}
+
+.trending-gifos .text-trending {
+  margin-bottom: 2em;
+}
+
+body.dark-mode .trending-gifos .text-trending {
+  color: #ffffff;
+}
+
+.trending-gifos .text-trending span {
+  text-transform: uppercase;
+}
+
+.trending-gifos .gifos-trending {
+  margin-left: 1.37em;
+  /*
+    <img src="https://picsum.photos/200/300" alt="" class="image"/>
+        <div class="middle">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
+        
+        .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+*/
+}
+
+.trending-gifos .gifos-trending img {
+  width: 14.62em;
+  height: 11.68em;
+}
+
+.trending-gifos .gifos-trending img:hover {
+  content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
+}
+
+.trending-gifos .gifos-trending button {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .trending-gifos {
+    padding-top: 4.18em;
+    height: 35em;
+  }
+  .trending-gifos h2 {
+    margin-bottom: 0.75em;
+  }
+  .trending-gifos .text-trending {
+    margin-bottom: 3.31em;
+  }
+  .trending-gifos .gifos-trending {
+    margin-left: 1.81em;
+  }
+  .trending-gifos .gifos-trending img {
+    width: 22.31em;
+    height: 17.18em;
+  }
+  .trending-gifos .gifos-trending button {
+    display: inline-block;
+  }
+}
+
+/*
+  @media screen and (min-width: 768px) {
+    /*
+   
+*/
+/*
+  }
+  
+  @media screen and (min-width: 1023px) {
+  }
+  @media screen and (min-width: 1439px) {
+  }
+  */
 * {
   padding: 0;
   margin: 0;

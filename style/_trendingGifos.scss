@@ -1,157 +1,130 @@
-// .trending-gifos {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   flex-direction: column;
-//   //background-color: $background-trending-gifos;
-//   background-color: lightcoral;
-//   h2 {
-//     margin-top: 1.87em;
-//     width: 98%;
-//     color: $line-color;
-//     text-transform: capitalize;
-//     span {
-//       text-transform: uppercase;
-//     }
-//   }
-//   p {
-//     width: 95%;
-//     margin-top: 0.43em;
-//     margin-bottom: 2em;
-//     span {
-//       text-transform: uppercase;
-//     }
-//   }
-// }
-
-.testing {
-  /*
-    margin-top: 32px;
-    margin-left: 22px;
-    margin-bottom:82px;
-    */
-  display: flex;
-  flex-direction: row;
-  margin-top: 2em;
-  margin-bottom: 1.37em;
-  margin-bottom: 5.12em;
-  img {
-    width: 15.18em; //243;;
-    height: 11.68em; //187;
+.trending-gifos {
+  background-color: $background-trending-gifos;
+  padding-top: 2.87em; //46px;
+  height: 26.87em; //430px;
+  //dark-mode
+  body.dark-mode & {
+    background-color: $background-trending-gifos-dark-mode;
+  }
+  h2 {
+    text-transform: capitalize;
+    width: 100%;
+    font-size: 1.25em; //20px;
+    line-height: 1.87em; //30px;
+    margin-bottom: 0.43em; //7px;
+    //dark-mode
+    body.dark-mode & {
+      color: $white-color;
+    }
+    span {
+      text-transform: uppercase;
+    }
+  }
+  .text-trending {
+    margin-bottom: 2em; // 32px;
+    //dark-mode
+    body.dark-mode & {
+      color: $white-color;
+    }
+    span {
+      text-transform: uppercase;
+    }
+  }
+  .gifos-trending {
+    margin-left: 1.37em; //22px;
+    img {
+      width: 14.62em; //243px;
+      height: 11.68em; //187px;
+    }
+    img:hover {
+      content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
+    }
     /*
-    margin-right:22px;
-    */
-    margin-right: 1.37em;
+    <img src="https://picsum.photos/200/300" alt="" class="image"/>
+        <div class="middle">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+        </div>
+        
+        .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+*/
+    button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .trending-gifos {
+    padding-top: 4.18em; //67px;
+    height: 35em; //40em; //640px;
+    //dark-mode
+    h2 {
+      margin-bottom: 0.75em; //12px;
+    }
+    .text-trending {
+      margin-bottom: 3.31em; //53px;
+    }
+    .gifos-trending {
+      margin-left: 1.81em; //29px;
+      img {
+        width: 22.31em; //357px;
+        height: 17.18em; //275px;
+      }
+      button {
+        display: inline-block;
+      }
+    }
   }
 }
 
 /*
-.search-gifos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  
-    .title-search-gifos {
-      margin-top: 0.43em;
-      width: 10em;
-      text-align: center;
-      //dark-mode
-      body.dark-mode & {
-        color: $white-color;
-      }
-    }
-    img {
-      width: 17.06em;
-      height: 8.12em;
-      margin-top: 1.9em;
-    }
-  }
-  
-  .form-search {
-    border: 0.06em solid $line-color;
-    border-radius: 1.68em;
-    width: 17.87em; //20.87em
-    height: 2.12em; //3.12em
-    display: flex;
-    justify-content: space-around;
-  
-    //dark-mode
-    body.dark-mode & {
-      border-color: $white-color;
-    }
-    input {
-      border: none;
-      //dark-mode
-      body.dark-mode & {
-        background-color: $body-dark-color;
-        color: $link-active-color;
-      }
-    }
-    button {
-      border: none;
-      background-color: $white-color;
-      //dark-mode
-      body.dark-mode & {
-        background-color: $body-dark-color;
-        color: $link-active-color;
-      }
-    }
-    img {
-      width: 1.25em;
-      height: 1.25em;
-      margin-top: 0;
-      margin-left: 0;
-  
-      //dark mode
-      body.dark-mode & {
-        content: url("/assets/img/icon-search-modo-noct.svg");
-      }
-    }
-  }
-  
   @media screen and (min-width: 768px) {
-    .search-gifos {
-      .title-search-gifos {
-        margin-top: 2.75em;
-        width: 20.37em;
-        text-align: center;
-        font-size: 2.18em;
-      }
-      img {
-        width: 24.93em;
-        height: 11.87em;
-        margin-top: 1.5em;
-      }
-    }
-  
-    .form-search {
-      border: 0.06em solid $line-color;
-      border-radius: 1.68em;
-      width: 34.43em;
-      height: 3.12em;
-      input {
-        background-color: $white-color;
-        font-size: 1em;
-        //dark-mode
-        body.dark-mode & {
-          background-color: $body-dark-color;
-        }
-      }
-      button {
-        background-color: $white-color;
-        //dark-mode
-        body.dark-mode & {
-          background-color: $body-dark-color;
-        }
-      }
-      img {
-        width: 1.25em;
-        height: 1.25em;
-        margin-top: 0;
-        margin-left: 0;
-      }
-    }
+    /*
+   
+*/
+/*
   }
   
   @media screen and (min-width: 1023px) {

@@ -6,13 +6,14 @@ $link-active-color: #9cafc3;
 $black-color: #000000;
 $body-dark-color: #37383c;
 $background-trending-gifos: #f3f5f8;
+$background-trending-gifos-dark-mode: #222326;
 $font-montserrat: "Montserrat", sans-serif;
 $font-roboto: "Roboto", sans-serif;
 
 @import "header";
 @import "searchGifos";
 @import "trendingInfo";
-//@import "trendingGifos";
+@import "trendingGifos";
 //@import "footer";
 
 * {
