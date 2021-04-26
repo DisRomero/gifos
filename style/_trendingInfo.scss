@@ -17,10 +17,17 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 2.81em;
-    font-size: 0.57em;
-    width: 90%;
+    width: 14.06em; //90%; //225px
+    height: 3.12em; // 50px;
     font-weight: normal;
-    line-height: normal;
+    font-size: 0.6em; // 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    a {
+      margin-right: 0.5em;
+      text-transform: capitalize;
+    }
     //dark-mode
     body.dark-mode & {
       color: $white-color;

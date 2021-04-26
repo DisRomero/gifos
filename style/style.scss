@@ -10,11 +10,10 @@ $font-montserrat: "Montserrat", sans-serif;
 $font-roboto: "Roboto", sans-serif;
 
 @import "header";
-@import "search";
-@import "trending";
-@import "searchResponde";
-@import "trendingGifos";
-@import "footer";
+@import "searchGifos";
+@import "trendingInfo";
+//@import "trendingGifos";
+//@import "footer";
 
 * {
   padding: 0;
