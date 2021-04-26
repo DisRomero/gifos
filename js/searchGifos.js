@@ -2,14 +2,12 @@ let q = "";
 let api_search = "";
 let api_suggestion ="";
 let inputSearch ="";
-const btnSearch = document.getElementById("btn-form-search");
 const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 //const api_key = 'M56ORmffhkS4OWzdIE3ZPfFQXWSjF30N';
 const search = document.getElementById('input-form-search');
-const matchList =document.getElementById('match-list');
+const btnSearch = document.getElementById("btn-form-search");
+const suggestion = document.getElementById('ul-form-search');
 
-
-//// click input delete value
 btnSearch.addEventListener("click", (event) => {
   event.preventDefault();
   getValues();
@@ -30,7 +28,6 @@ export async function sendApiRequest() {
       return respondeSearch.json();
     })
     .then(function (json) {
-      ///////////respondeJson = json;
       //console.log(json);
       json.data.forEach(function (obj) {
         //console.log(obj.images.downsized.url);
@@ -42,32 +39,39 @@ export async function sendApiRequest() {
 }
 
 const searchGifos = async searchText => {
-  const res = await fetch (`https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=2`);
+  const res = await fetch 
+  (`https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=2`);
   const gifos = await res.json();
-  //console.log(gifos);
-  //data.data[0].name
+
+  
+  let tagForm = document.getElementById('ul-form-search');
+
+  tagForm.innerHTML = '';
+
   gifos.data.forEach(function (obj){
-    console.log(obj.name);
-  
+    let nameSuggestion = obj.name;
+    let tagImg = document.createElement('img');
+    let tag = document.createElement('li');
+    let textSuggestion = document.createTextNode(nameSuggestion);
     
-let nameSuggestion = obj.name;
-let tag = document.createElement('li');
-let textSuggestion =document.createTextNode(nameSuggestion);
-tag.appendChild(textSuggestion);
-let tagForm = document.getElementById('ul-form-search');
-tagForm.appendChild(tag);
-
-
-if(searchText.length === 0){
-  tag.style.display="none";
-}
+    tagForm.style.display='block';
+    tag.appendChild(textSuggestion);
+    tagForm.appendChild(tagImg);
+    tagForm.appendChild(tag);
   });
-  
 
+  if(gifos.data.length===0){
+    console.log('perdon no se encontro datos');
+  }
 
-  //if(searchText.length === 0)
-
-  //get matches to current text input
 };
 
-search.addEventListener('input', ()=> searchGifos(search.value));
+search.addEventListener('keyup', (e) => {
+  searchGifos(e.target.value);
+  if(e.target.value === ''){
+    let tagForm = document.getElementById('ul-form-search');
+    tagForm.style.display='none';
+    tagForm.value = '';
+      
+  }
+});

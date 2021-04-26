@@ -344,8 +344,37 @@ body.dark-mode .form-search img {
   content: url("/assets/img/icon-search-modo-noct.svg");
 }
 
-.form-search .ul-form-search li {
+.ul-form-search {
+  display: none;
+  width: 17.5em;
+  border: 0.06em solid #572ee5;
+  border-radius: 1.68em;
+  list-style-type: none;
+}
+
+.ul-form-search img {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0;
+  margin-left: 0;
+  content: url("/assets/img/icon-search-mod-noc.svg");
+  margin-top: 0.5em;
+  margin-left: 1.43em;
+}
+
+.ul-form-search li {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
   text-align: left;
+  margin-left: 1.3em;
+  display: inline-block;
+  width: 13.4em;
+  height: 1.37em;
+  font-size: 1em;
+  margin-bottom: 0.4em;
+  margin-left: 0.8em;
+  color: #9cafc3;
 }
 
 @media screen and (min-width: 768px) {
