@@ -97,6 +97,10 @@
     margin-left: 0.8em; // 14.6px;
     color: $link-active-color;
   }
+  //dark mode
+  body.dark-mode & {
+    border-color: $white-color;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -122,6 +126,7 @@
     input {
       background-color: $white-color;
       font-size: 1em;
+      width: 83%;
       //dark-mode
       body.dark-mode & {
         background-color: $body-dark-color;
@@ -139,6 +144,26 @@
       height: 1.25em;
       margin-top: 0;
       margin-left: 0;
+    }
+  }
+
+  .ul-form-search {
+    width: 34.43em;
+
+    img {
+      width: 0.9em;
+      height: 0.9em;
+    }
+    li {
+      width: 90%; // 215px;
+      //dark mode
+      body.dark-mode & {
+        color: $white-color;
+      }
+    }
+    //dark mode
+    body.dark-mode & {
+      border-color: $white-color;
     }
   }
 }

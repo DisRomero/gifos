@@ -36,7 +36,7 @@ export async function sendApiRequest() {
     .catch(function (err) {
       console.log(err.message);
     });
-}
+};
 
 const searchGifos = async searchText => {
   const res = await fetch 
@@ -61,8 +61,8 @@ const searchGifos = async searchText => {
   });
 
   if(gifos.data.length===0){
-    console.log('perdon no se encontro datos');
-  }
+    console.log('perdon no se encontro datos');//stlye display block al id search-gifos-responde 
+  };
 
 };
 
@@ -73,5 +73,5 @@ search.addEventListener('keyup', (e) => {
     tagForm.style.display='none';
     tagForm.value = '';
       
-  }
+  };
 });

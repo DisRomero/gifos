@@ -74,6 +74,11 @@ nav {
     text-transform: capitalize;
     border-bottom: 0.06em solid $white-color;
     padding-bottom: 0.75em;
+    /*:after {
+    content: "__";
+    display: block;
+    text-align: center;
+}*/
   }
 }
 .burger-btn {

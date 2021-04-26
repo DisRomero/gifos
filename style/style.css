@@ -82,6 +82,11 @@ body.dark-mode .menu-conten {
   text-transform: capitalize;
   border-bottom: 0.06em solid #ffffff;
   padding-bottom: 0.75em;
+  /*:after {
+    content: "__";
+    display: block;
+    text-align: center;
+}*/
 }
 
 .burger-btn {
@@ -377,6 +382,10 @@ body.dark-mode .form-search img {
   color: #9cafc3;
 }
 
+body.dark-mode .ul-form-search {
+  border-color: #ffffff;
+}
+
 @media screen and (min-width: 768px) {
   .search-gifos .title-search-gifos {
     margin-top: 2.75em;
@@ -398,6 +407,7 @@ body.dark-mode .form-search img {
   .form-search input {
     background-color: #ffffff;
     font-size: 1em;
+    width: 83%;
   }
   body.dark-mode .form-search input {
     background-color: #37383c;
@@ -413,6 +423,22 @@ body.dark-mode .form-search img {
     height: 1.25em;
     margin-top: 0;
     margin-left: 0;
+  }
+  .ul-form-search {
+    width: 34.43em;
+  }
+  .ul-form-search img {
+    width: 0.9em;
+    height: 0.9em;
+  }
+  .ul-form-search li {
+    width: 90%;
+  }
+  body.dark-mode .ul-form-search li {
+    color: #ffffff;
+  }
+  body.dark-mode .ul-form-search {
+    border-color: #ffffff;
   }
 }
 
