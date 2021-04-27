@@ -6,6 +6,12 @@ const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 const search = document.getElementById('input-form-search');
 const btnSearch = document.getElementById("btn-form-search");
 const suggestion = document.getElementById('ul-form-search');
+const divResponde = document.getElementById('search-gifos-responde');
+const titleResponde = document.getElementById('tittle-search-gifos-responde');
+const listResponde = document.getElementById('ul-search-gifos-responde');
+
+////////search responde
+const sectionTag = divResponde.style.display = "none";
 
 btnSearch.addEventListener("click", (event) => {
   event.preventDefault();
@@ -17,24 +23,44 @@ btnSearch.addEventListener("click", (event) => {
 function getValues() {
   inputSearch = document.getElementById("input-form-search").value;
   q = inputSearch;
-  api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=1`;
-  api_suggestion = `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${q}&limit=1`;
+  api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&offset=4&limit=6`;
+  //api_suggestion = `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${q}&limit=1`;
 }
 
 export async function sendApiRequest() {
   fetch(api_search)
     .then(function (respondeSearch) {
-      console.log(respondeSearch);      
       return respondeSearch.json();
     })
     .then(function (json) {
       if(json.data.length===0){
         suggestion.style.display='none';
         console.log('perdon no se encontro datos');
-      };
-      console.log(json);
+      };     
       json.data.forEach(function (obj) {
-      console.log(obj.images.downsized.url);
+      //console.log(obj.images.downsized.url);
+      /////responde and display the div
+      divResponde.style.display='flex'; 
+      /////display the title     
+      let textSuggestion = document.createTextNode(q);
+      titleResponde.innerHTML = titleResponde.innerHTML.replace(" ", textSuggestion.data);
+      ////create and display the gif's into a list
+      let tagLiResponde = document.createElement('li');
+      let tagImgResponde = document.createElement('img');
+      tagImgResponde.src = obj.images.downsized.url;
+      listResponde.appendChild(tagLiResponde);
+      tagLiResponde.appendChild(tagImgResponde);
+     // add the function Ver mas
+
+/**
+ * listResponde.appenchild(tag creado)
+ * 
+ * var img = document.createElement("img");
+img.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
+var src = document.getElementById("header");
+src.appendChild(img);
+ * 
+ */
       });
     })
     .catch(function (err) {
@@ -44,7 +70,7 @@ export async function sendApiRequest() {
 
 const searchGifos = async searchText => {
   const res = await fetch 
-  (`https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=2`);
+  (`https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=4`);
   const gifos = await res.json();
   suggestion.innerHTML = '';
 
@@ -53,7 +79,6 @@ const searchGifos = async searchText => {
     let tagImg = document.createElement('img');
     let tag = document.createElement('li');
     let textSuggestion = document.createTextNode(nameSuggestion);
-    
     suggestion.style.display='block';
     tag.appendChild(textSuggestion);
     suggestion.appendChild(tagImg);
@@ -64,9 +89,9 @@ const searchGifos = async searchText => {
 
 search.addEventListener('keyup', (e) => {
   searchGifos(e.target.value);
+
   if(e.target.value === ''){
     suggestion.style.display='none';
-    suggestion.value = '';
-      
+    suggestion.value = ''; 
   };
 });

@@ -526,6 +526,89 @@ body.dark-mode .trending-info p a {
 }
 
 */
+.search-gifos-responde {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.search-gifos-responde .line {
+  opacity: 0.5;
+  border: 0.06em solid #9cafc3;
+  width: 9.81em;
+  height: 0.06em;
+}
+
+.search-gifos-responde h2 {
+  margin-top: 1.84em;
+  margin-bottom: 1.53em;
+  font-size: 1.56em;
+  line-height: 2.5em;
+  text-transform: capitalize;
+}
+
+.search-gifos-responde .responde-list {
+  width: 90%;
+  margin-left: -0.5em;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 7.5em 7.5em;
+      grid-template-rows: 7.5em 7.5em;
+  -webkit-column-gap: 0.5em;
+          column-gap: 0.5em;
+  row-gap: 0.5em;
+}
+
+.search-gifos-responde .responde-list img {
+  width: 8.5em;
+  height: 7.5em;
+}
+
+.search-gifos-responde button {
+  width: 5.28em;
+  height: 2.18em;
+  margin-top: 3.13em;
+  border: 0.08em solid #572ee5;
+  background-color: #ffffff;
+  border-radius: 1.56em;
+  border-radius: 1.56em;
+  font-size: 1em;
+  margin-bottom: 2.43em;
+}
+
+/*
+@media screen and (min-width: 768px) {
+  .trending-info {
+      //dark-mode
+      body.dark-mode & {
+        color: $white-color;
+      }
+  }
+}
+/*
+
+@media screen and (min-width: 1023px) {
+}
+@media screen and (min-width: 1439px) {
+}
+
+*/
 .trending-gifos {
   background-color: #f3f5f8;
   padding-top: 2.87em;

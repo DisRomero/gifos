@@ -21,5 +21,4 @@ fetch(trending)
   })
   .catch((err) => console.log(err));
 
-////////search responde
-const sectionTag = (document.getElementById("search-gifos-responde").style.display = "none");
+

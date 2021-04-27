@@ -3,10 +3,8 @@ colorSwitch.addEventListener("click", checkMode);
 
 export function checkMode() {
   if (colorSwitch.checked) {
-    console.log("dark mode");
     darkModeOn();
   } else {
-    console.log("light mode");
     darkModeOff();
   }
 }
