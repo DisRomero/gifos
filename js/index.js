@@ -3,7 +3,7 @@ const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 
 import { checkMode } from "./darkMode.js";
 import { sendApiRequest } from "./searchGifos.js";
-import * as trendingTag from "./trendingTitle.js";
+import * as trendingTag from "./trendingInfo.js";
 
 /////fetch gif treding
 const trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=1`;

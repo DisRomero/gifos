@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 2.93em; //47px;
+  margin-top: 2.93em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,13 +12,13 @@
     letter-spacing: 0;
   }
   .social-network {
-    margin-top: 1.5em; //24px;
+    margin-top: 1.5em;
     margin-left: 1em;
     img {
       align-items: center;
-      margin-right: 1.18em; //19px;
-      width: 1.25em; //20px;
-      height: 1.25em; //20px;
+      margin-right: 1.18em;
+      width: 1.25em;
+      height: 1.25em;
     }
     .fb {
       content: url("/assets/img/icon_facebook.svg");
@@ -53,7 +53,7 @@
   }
   .copyright {
     letter-spacing: 0;
-    margin-top: 2.98em; //47.8px;
+    margin-top: 2.98em;
     text-transform: capitalize;
     body.dark-mode & {
       color: $white-color;
@@ -65,7 +65,7 @@
 }
 footer {
   .line-color {
-    margin-top: 1.43em; //23px;
+    margin-top: 1.43em;
   }
 }
 
@@ -75,17 +75,17 @@ footer {
     flex-direction: row;
 
     p {
-      margin-left: 3.75em; //9.75em; //156px;
+      margin-left: 3.75em;
     }
 
     .social-network {
       margin-bottom: -0.3em;
-      margin-left: -6em; //17
+      margin-left: -6em;
       margin-top: 0;
     }
     .copyright {
       margin-top: 0;
-      margin-right: 3.87em; //9.87em; //158px;
+      margin-right: 3.87em;
     }
   }
 }
@@ -93,7 +93,7 @@ footer {
 @media screen and (min-width: 1023px) {
   .footer {
     .social-network {
-      margin-left: -22em; //17
+      margin-left: -22em;
     }
   }
 }
@@ -101,11 +101,7 @@ footer {
 @media screen and (min-width: 1439px) {
   .footer {
     .social-network {
-      margin-left: -47em; //17
+      margin-left: -47em;
     }
   }
 }
-
-/*
-
-*/

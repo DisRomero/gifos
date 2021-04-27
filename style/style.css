@@ -82,11 +82,6 @@ body.dark-mode .menu-conten {
   text-transform: capitalize;
   border-bottom: 0.06em solid #ffffff;
   padding-bottom: 0.75em;
-  /*:after {
-    content: "__";
-    display: block;
-    text-align: center;
-}*/
 }
 
 .burger-btn {
@@ -503,7 +498,11 @@ body.dark-mode .trending-info h2 {
   text-transform: capitalize;
 }
 
-body.dark-mode .trending-info p {
+.trending-info p a:visited {
+  color: #572ee5;
+}
+
+body.dark-mode .trending-info p a {
   color: #ffffff;
 }
 
@@ -797,9 +796,6 @@ footer .line-color {
   }
 }
 
-/*
-
-*/
 * {
   padding: 0;
   margin: 0;
