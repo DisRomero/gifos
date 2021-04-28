@@ -38,12 +38,11 @@ export async function sendApiRequest() {
         console.log('perdon no se encontro datos');
       };     
       json.data.forEach(function (obj) {
-      //console.log(obj.images.downsized.url);
       /////responde and display the div
       divResponde.style.display='flex'; 
       /////display the title     
       let textSuggestion = document.createTextNode(q);
-      titleResponde.innerHTML = titleResponde.innerHTML.replace(" ", textSuggestion.data);
+      titleResponde.innerHTML = textSuggestion.data;
       ////create and display the gif's into a list
       let tagLiResponde = document.createElement('li');
       let tagImgResponde = document.createElement('img');
@@ -75,11 +74,15 @@ const searchGifos = async searchText => {
   suggestion.innerHTML = '';
 
   gifos.data.forEach(function (obj){
-    let nameSuggestion = obj.name;
     let tagImg = document.createElement('img');
     let tag = document.createElement('li');
-    let textSuggestion = document.createTextNode(nameSuggestion);
-    suggestion.style.display='block';
+    let textSuggestion = document.createTextNode(obj.name);
+    
+    tag.addEventListener('click', (e) =>{
+      search.value = obj.name;
+      btnSearch.click();
+    });
+
     tag.appendChild(textSuggestion);
     suggestion.appendChild(tagImg);
     suggestion.appendChild(tag);
@@ -93,5 +96,9 @@ search.addEventListener('keyup', (e) => {
   if(e.target.value === ''){
     suggestion.style.display='none';
     suggestion.value = ''; 
+  }else{
+    suggestion.style.display='block';
   };
 });
+
+////// disparar busqueda con enter
