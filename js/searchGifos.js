@@ -46,7 +46,6 @@ export async function sendApiRequest() {
         let textSuggestion = document.createTextNode(q);
         titleResponde.innerHTML = textSuggestion.data;
         let imgFailResponde = document.createElement("img");
-        //imgFailResponde.classList.add("claseDePrueba");
         let txtFailResponde = document.createElement("p");
         txtFailResponde.classList.add("txt-fail-responde");
         imgFailResponde.src = "assets/img/icon-busqueda-sin-resultado.svg";
@@ -54,9 +53,8 @@ export async function sendApiRequest() {
         divResponde.appendChild(imgFailResponde);
         divResponde.appendChild(txtFailResponde);
       }
-
       listResponde.innerHTML = "";
-      json.data.forEach(function (obj) {
+      json.data.forEach(function (obj, i) {
         /////responde and display the information
         divResponde.style.display = "flex";
         let textSuggestion = document.createTextNode(q);
@@ -67,19 +65,21 @@ export async function sendApiRequest() {
         tagImgResponde.src = obj.images.downsized.url;
         listResponde.appendChild(tagLiResponde);
         tagLiResponde.appendChild(tagImgResponde);
-        // add the function Ver mas
-
-        /**
- * listResponde.appenchild(tag creado)
- * 
- * var img = document.createElement("img");
-img.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
-var src = document.getElementById("header");
-src.appendChild(img);
- * 
- */
       });
+      //imprimir hasta que splice cumpla
+      //asiganra valores al splice e imprimilo, si se usa el boton editar valores del splice e imprimir valores
+     
+      // function displayMoreGifos(){
+      //   console.log('mostrare mas gifos');
+      // };
+
+      // let btnSeeMore = document.getElementById("btn-search-gifos-responde");
+      // btnSeeMore.addEventListener('click', () => {
+      //   displayMoreGifos();
+      // })
+
     })
+    
     .catch(function (err) {
       console.log(err.message);
     });
@@ -108,6 +108,7 @@ const searchGifos = async (searchText) => {
   });
 };
 
+////// start the search fucntion
 search.addEventListener("keyup", (e) => {
   searchGifos(e.target.value);
 
@@ -117,6 +118,13 @@ search.addEventListener("keyup", (e) => {
   } else {
     suggestion.style.display = "block";
   }
+
+  if (e.key === 'Enter'){
+    suggestion.style.display = "none";
+    getValues();
+    sendApiRequest();    
+  }
 });
 
-////// disparar busqueda con enter
+
+
