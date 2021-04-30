@@ -54,7 +54,12 @@ export async function sendApiRequest() {
         divResponde.appendChild(txtFailResponde);
       }
       listResponde.innerHTML = "";
-      json.data.forEach(function (obj, i) {
+      let initialValue = 0;
+      let lastValue = 4;
+      let jsonData = json.data.splice(initialValue, lastValue);
+      console.log(jsonData, "Json data splice");
+
+      json.data.forEach(function (obj) {
         /////responde and display the information
         divResponde.style.display = "flex";
         let textSuggestion = document.createTextNode(q);
@@ -66,20 +71,8 @@ export async function sendApiRequest() {
         listResponde.appendChild(tagLiResponde);
         tagLiResponde.appendChild(tagImgResponde);
       });
-      //imprimir hasta que splice cumpla
-      //asiganra valores al splice e imprimilo, si se usa el boton editar valores del splice e imprimir valores
-     
-      // function displayMoreGifos(){
-      //   console.log('mostrare mas gifos');
-      // };
-
-      // let btnSeeMore = document.getElementById("btn-search-gifos-responde");
-      // btnSeeMore.addEventListener('click', () => {
-      //   displayMoreGifos();
-      // })
-
     })
-    
+
     .catch(function (err) {
       console.log(err.message);
     });
@@ -119,12 +112,39 @@ search.addEventListener("keyup", (e) => {
     suggestion.style.display = "block";
   }
 
-  if (e.key === 'Enter'){
+  if (e.key === "Enter") {
     suggestion.style.display = "none";
     getValues();
-    sendApiRequest();    
+    sendApiRequest();
   }
 });
 
+/*
+      imprimir hasta que splice cumpla
+      asiganra valores al splice e imprimilo, si se usa el boton editar valores del splice e imprimir valores
+     
+      function displayMoreGifos(){
+        console.log('mostrare mas gifos');
+      };
+
+      let btnSeeMore = document.getElementById("btn-search-gifos-responde");
+      btnSeeMore.addEventListener('click', () => {
+        displayMoreGifos();
+      })
+
+/////
+function exitoCallback(resultado) {
+  console.log("Archivo de audio disponible en la URL " + resultado);
+}
+
+function falloCallback(error) {
+  console.log("Error generando archivo de audio " + error);
+}
+
+crearArchivoAudioAsync(audioConfig, exitoCallback, falloCallback);
 
 
+const promesa = crearArchivoAudioAsync(audioConfig);
+promesa.then(exitoCallback, falloCallback);
+
+*/
