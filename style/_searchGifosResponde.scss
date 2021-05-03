@@ -32,15 +32,15 @@
     }
   }
   button {
-    width: 5.28em; //7.93em; // 127
-    height: 2.18em; //3.12em; // 50
+    width: 7.93em; // 127
+    height: 3.12em; // 50
     margin-top: 3.13em; //4.87em; // 78px
     border: 0.08em solid $line-color;
     background-color: $white-color;
     border-radius: 1.56em; //25px;
-    border-radius: 1.56em; //25px;
     font-size: 1em;
     margin-bottom: 2.43em; //39px;
+    text-transform: uppercase;
   }
   .txt-fail-responde {
     margin-top: 1.18em;

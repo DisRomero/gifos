@@ -583,15 +583,15 @@ body.dark-mode .trending-info p a {
 }
 
 .search-gifos-responde button {
-  width: 5.28em;
-  height: 2.18em;
+  width: 7.93em;
+  height: 3.12em;
   margin-top: 3.13em;
   border: 0.08em solid #572ee5;
   background-color: #ffffff;
   border-radius: 1.56em;
-  border-radius: 1.56em;
   font-size: 1em;
   margin-bottom: 2.43em;
+  text-transform: uppercase;
 }
 
 .search-gifos-responde .txt-fail-responde {
