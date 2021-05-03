@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .trending-gifos {
   background-color: $background-trending-gifos;
   padding-top: 2.87em; //46px;
@@ -30,16 +34,8 @@
       text-transform: uppercase;
     }
   }
-  .gifos-trending {
-    margin-left: 1.37em; //22px;
-    img {
-      width: 14.62em; //243px;
-      height: 11.68em; //187px;
-    }
-    img:hover {
-      content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
-    }
-    /*
+
+  /*
     <img src="https://picsum.photos/200/300" alt="" class="image"/>
         <div class="middle">
           <button>1</button>
@@ -89,9 +85,56 @@
 
 
 */
-    button {
-      display: none;
+}
+
+.gifos-trending {
+  //margin-left: 1.37em; //22px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  padding-right: 0;
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 400%; //width of the img total
+    height: 100%;
+    margin-left: -11.62em; //-100%; //width of the img
+    .slider-div {
+      width: 100%;
+      margin-right: 2%; //29px
+      .slider-image {
+        display: block;
+        width: 11.62em; //14.62em; //243px;
+        height: 11.68em; //187px;
+        object-fit: cover;
+      }
+      .slider-image:hover {
+        content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
+      }
     }
+  }
+  .slider-btn {
+    //display: none;
+    background-color: $background-trending-gifos;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $line-color;
+    color: $line-color;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .slider-btn:hover {
+    background-color: $line-color;
+    color: $white-color;
+  }
+  .btn-left {
+    margin-left: 1%; //94px;
+    margin-right: 22px;
+  }
+  .btn-right {
+    margin-left: 25px;
+    margin-right: 1%; //92px;
   }
 }
 

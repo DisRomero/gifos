@@ -87,10 +87,6 @@
       <p id="trending-info"></p>
     </section>
     <section id="search-gifos-responde" class="search-gifos-responde">
-      <div class="line"></div>
-      <h2 id="tittle-search-gifos-responde" class="text-body"></h2>
-      <ul id="ul-search-gifos-responde" class="responde-list"></ul>
-      <button class="text-body" id="btn-search-gifos-responde">ver más</button>
     </section>
     <section class="trending-gifos">
       <h2 class="text-body">trending <span>gifos</span></h2>
@@ -98,14 +94,22 @@
         Mira los últimos <span>gifos</span> de nuestra comunidad.
       </p>
       <div id="gifos-trending" class="gifos-trending">
-        <button><</button>
-        <img src="https://picsum.photos/200/300" alt="" class="image" />
-        <div class="middle">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
+        <button class="slider-btn btn-left" id="btn-left"><</button>
+        <div class="slider" id="slider">
+          <div class="slider-div">
+            <img src="https://picsum.photos/id/0/5616/3744" alt="" class="slider-image" />
+          </div>
+          <div class="slider-div">
+            <img src="https://picsum.photos/id/1/5616/3744" alt="" class="slider-image" />
+          </div>
+          <div class="slider-div">
+            <img src="https://picsum.photos/id/10/2500/1667" alt="" class="slider-image" />
+          </div>
+          <div class="slider-div">
+            <img src="https://picsum.photos/id/100/2500/1656" alt="" class="slider-image" />
+          </div>
         </div>
-        <button>></button>
+        <button class="slider-btn btn-right" id="btn-right">></button>
       </div>
     </section>
     <footer>
