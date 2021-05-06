@@ -17,23 +17,19 @@ btnSearch.addEventListener("click", (event) => {
 function getValues() {
   inputSearch = document.getElementById("input-form-search").value;
   q = inputSearch;
-  api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&offset=4&limit=6`;
+  api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&offset=4&limit=20`;
 };
 
-function addGifo (gifo) {
-  const titleResponde = document.getElementById("tittle-search-gifos-responde");
+function addGifo(gifo) {
   const listResponde = document.getElementById("ul-search-gifos-responde");
-
-    divResponde.style.display = "flex";
-    titleResponde.innerText = q;
-    let tagLiResponde = document.createElement("li");
-    let tagImgResponde = document.createElement("img");
-    tagImgResponde.src = gifo.images.downsized.url;
-    tagLiResponde.appendChild(tagImgResponde);
-    listResponde.appendChild(tagLiResponde);
+  let tagLiResponde = document.createElement("li");
+  let tagImgResponde = document.createElement("img");
+  tagImgResponde.src = gifo.images.downsized.url;
+  tagLiResponde.appendChild(tagImgResponde);
+  listResponde.appendChild(tagLiResponde);
 };
 
-function respondeWithoutGifos (){
+function respondeWithoutGifos(){
   divResponde.innerHTML = '';
   const divLine = document.createElement('div');
   divLine.classList.add('line');
@@ -51,7 +47,7 @@ function respondeWithoutGifos (){
   divResponde.appendChild(p);
 };
 
-function respondeWithGifos (gifo){
+function respondeWithGifos (){
   divResponde.innerHTML = '';
   const divLine = document.createElement('div');
   divLine.classList.add('line');
@@ -60,24 +56,11 @@ function respondeWithGifos (gifo){
   title.innerText = q;
   const ul = document.createElement('ul');
   ul.classList.add('responde-list');
+  ul.id = 'ul-search-gifos-responde';
   divResponde.appendChild(divLine);
   divResponde.appendChild(title);
   divResponde.appendChild(ul);
-
-  const btn = document.createElement('button');
-  btn.classList.add('text-body');
-  btn.textContent = 'ver más';
-  divResponde.appendChild(btn);
-
-  // const li = document.createElement('li');
-  // const img = document.createElement('img');
-  // img.src = gifo.images.downsized.url;
-  // li.appendChild(img);
-  // ul.appendChild(li);
-  // divResponde.appendChild(ul);
-
-}
-
+};
 
 export async function sendApiRequest() {
   fetch(api_search)
@@ -86,7 +69,6 @@ export async function sendApiRequest() {
     })
     .then(function (json) {
       const data = json.data;
-      let btnSeeMore = document.getElementById("btn-search-gifos-responde");//
 
       if(data.length === 0) {
         respondeWithoutGifos();
@@ -95,38 +77,25 @@ export async function sendApiRequest() {
       if(data.length > 0) {
         divResponde.innerHTML = '';
         respondeWithGifos();
+        let initialPosition = 0;
+        let size = 12;
+        let nextGifos = data.splice(initialPosition, size);
+        nextGifos.forEach(addGifo);
 
-        data.forEach( function(e){
-          const li = document.createElement('li');
-          const img = document.createElement('img');
-          img.src = e.images.downsized.url;
-          li.appendChild(img);
-          ul.appendChild(li);//add if of the responde with gifos function to call here
-          divResponde.appendChild(ul);
+        const btn = document.createElement('button');
+        btn.classList.add('text-body');
+        btn.id = 'btn-search-gifos-responde';
+        btn.textContent = 'ver más';
+        divResponde.appendChild(btn);
+                
+        btn.addEventListener('click', () => {
+          let nextGifos = data.splice(initialPosition, size);
+          nextGifos.forEach(addGifo);
+          if (data.length === 0) {
+            btn.style.display = 'none';
+          }
+        })
 
-
-        });
-
-        
-
-
-
-        //<button class="text-body" id="btn-search-gifos-responde">ver más</button>
-
-
-        // btnSeeMore.style.display = 'block';
-        // listResponde.innerHTML = "";
-        // let initialPosition = 0;
-        // let size = 4;
-        // let jsonData = data.splice(initialPosition, size);
-        // jsonData.forEach(addGifo);
-        // btnSeeMore.addEventListener('click', () => {
-        //   let nextGifos = data.splice(initialPosition, size);
-        //   nextGifos.forEach(addGifo);
-        //   if(data.length === 0) {
-        //     btnSeeMore.style.display = 'none';
-        //   }
-        // })
       }
 
     })
@@ -159,7 +128,6 @@ const searchGifos = async (searchText) => {
   });
 };
 
-////// start the search fucntion
 search.addEventListener("keyup", (e) => {
   searchGifos(e.target.value);
 

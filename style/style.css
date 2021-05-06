@@ -559,6 +559,10 @@ body.dark-mode .trending-info p a {
   text-transform: capitalize;
 }
 
+body.dark-mode .search-gifos-responde h2 {
+  color: #ffffff;
+}
+
 .search-gifos-responde .responde-list {
   width: 90%;
   margin-left: -0.5em;
@@ -590,8 +594,13 @@ body.dark-mode .trending-info p a {
   background-color: #ffffff;
   border-radius: 1.56em;
   font-size: 1em;
-  margin-bottom: 2.43em;
   text-transform: uppercase;
+}
+
+body.dark-mode .search-gifos-responde button {
+  background-color: #37383c;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .search-gifos-responde .txt-fail-responde {
@@ -606,6 +615,15 @@ body.dark-mode .trending-info p a {
 }
 
 @media screen and (min-width: 768px) {
+  .search-gifos-responde .responde-list {
+    -ms-grid-columns: 25% 25% 25% 25%;
+        grid-template-columns: 25% 25% 25% 25%;
+    -ms-grid-rows: 8.5em 8.5em;
+        grid-template-rows: 8.5em 8.5em;
+  }
+  .search-gifos-responde .responde-list img {
+    width: 10.25em;
+  }
   .search-gifos-responde .txt-fail-responde {
     margin-top: 1.81em;
     margin-bottom: 9.31em;
@@ -616,20 +634,28 @@ body.dark-mode .trending-info p a {
   }
 }
 
-/*
-
 @media screen and (min-width: 1023px) {
-  .trending-info {
-      //dark-mode
-      body.dark-mode & {
-        color: $white-color;
-      }
+  .search-gifos-responde .responde-list {
+    -ms-grid-rows: 9.5em 9.5em;
+        grid-template-rows: 9.5em 9.5em;
+  }
+  .search-gifos-responde .responde-list img {
+    width: 14.25em;
+    height: 8.5em;
   }
 }
+
 @media screen and (min-width: 1439px) {
+  .search-gifos-responde .responde-list {
+    -ms-grid-rows: 13.5em 13.5em;
+        grid-template-rows: 13.5em 13.5em;
+  }
+  .search-gifos-responde .responde-list img {
+    width: 16.25em;
+    height: 12.5em;
+  }
 }
 
-*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -639,6 +665,7 @@ body.dark-mode .trending-info p a {
   background-color: #f3f5f8;
   padding-top: 2.87em;
   height: 26.87em;
+  margin-top: 2.43em;
   /*
     <img src="https://picsum.photos/200/300" alt="" class="image"/>
         <div class="middle">

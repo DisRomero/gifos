@@ -6,15 +6,19 @@
   .line {
     opacity: 0.5;
     border: 0.06em solid $link-active-color;
-    width: 9.81em; //157px;
-    height: 0.06em; //1px;
+    width: 9.81em;
+    height: 0.06em;
   }
   h2 {
-    margin-top: 1.84em; //2.68em; //43px;
-    margin-bottom: 1.53em; //38px;
-    font-size: 1.56em; //25px;
-    line-height: 2.5em; //40px;
+    margin-top: 1.84em;
+    margin-bottom: 1.53em;
+    font-size: 1.56em;
+    line-height: 2.5em;
     text-transform: capitalize;
+    //dark-mode
+    body.dark-mode & {
+      color: $white-color;
+    }
   }
   .responde-list {
     width: 90%;
@@ -22,25 +26,30 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 50% 50%; //8.3em 8.3em; //9.75em 9.75em; //156px 156px;
-    grid-template-rows: 7.5em 7.5em; //120px 120px;
-    column-gap: 0.5em; // 1.1em; //21px;
-    row-gap: 0.5em; //1.5em; //25px; 156 21 156
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 7.5em 7.5em;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
     img {
-      width: 8.5em; //9.75em; //156px;
-      height: 7.5em; //120px;
+      width: 8.5em;
+      height: 7.5em;
     }
   }
   button {
-    width: 7.93em; // 127
-    height: 3.12em; // 50
-    margin-top: 3.13em; //4.87em; // 78px
+    width: 7.93em;
+    height: 3.12em;
+    margin-top: 3.13em;
     border: 0.08em solid $line-color;
     background-color: $white-color;
-    border-radius: 1.56em; //25px;
+    border-radius: 1.56em;
     font-size: 1em;
-    margin-bottom: 2.43em; //39px;
     text-transform: uppercase;
+    //dark-mode
+    body.dark-mode & {
+      background-color: $body-dark-color;
+      color: $white-color;
+      border-color: $white-color;
+    }
   }
   .txt-fail-responde {
     margin-top: 1.18em;
@@ -56,28 +65,45 @@
 
 @media screen and (min-width: 768px) {
   .search-gifos-responde {
+    .responde-list {
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 8.5em 8.5em;
+      img {
+        width: 10.25em;
+      }
+    }
+
     .txt-fail-responde {
       margin-top: 1.81em;
       margin-bottom: 9.31em;
       font-size: 1.37em;
       font-size: 1em;
-      width: 19.56em; //313px;
-      height: 1.56em; //25px;
+      width: 19.56em;
+      height: 1.56em;
     }
   }
 }
 
-/*
-
 @media screen and (min-width: 1023px) {
-  .trending-info {
-      //dark-mode
-      body.dark-mode & {
-        color: $white-color;
+  .search-gifos-responde {
+    .responde-list {
+      grid-template-rows: 9.5em 9.5em;
+      img {
+        width: 14.25em;
+        height: 8.5em;
       }
+    }
   }
 }
-@media screen and (min-width: 1439px) {
-}
 
-*/
+@media screen and (min-width: 1439px) {
+  .search-gifos-responde {
+    .responde-list {
+      grid-template-rows: 13.5em 13.5em;
+      img {
+        width: 16.25em;
+        height: 12.5em;
+      }
+    }
+  }
+}
