@@ -18,7 +18,7 @@ function getValues() {
   inputSearch = document.getElementById("input-form-search").value;
   q = inputSearch;
   api_search = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&offset=4&limit=20`;
-};
+}
 
 function addGifo(gifo) {
   const listResponde = document.getElementById("ul-search-gifos-responde");
@@ -27,105 +27,111 @@ function addGifo(gifo) {
   tagImgResponde.src = gifo.images.downsized.url;
   tagLiResponde.appendChild(tagImgResponde);
   listResponde.appendChild(tagLiResponde);
-};
+}
 
-function respondeWithoutGifos(){
-  divResponde.innerHTML = '';
-  const divLine = document.createElement('div');
-  divLine.classList.add('line');
-  const title = document.createElement('h2');
-  title.classList.add('text-body');
+function respondeWithoutGifos() {
+  divResponde.innerHTML = "";
+  const divLine = document.createElement("div");
+  divLine.classList.add("line");
+  const title = document.createElement("h2");
+  title.classList.add("text-body");
   title.innerText = q;
-  const img = document.createElement('img');
+  const img = document.createElement("img");
   img.src = "assets/img/icon-busqueda-sin-resultado.svg";
-  const p = document.createElement('p');
-  p.innerText = 'Intenta con otra búsqueda.';
-  p.classList.add('txt-fail-responde');
+  const p = document.createElement("p");
+  p.innerText = "Intenta con otra búsqueda.";
+  p.classList.add("txt-fail-responde");
   divResponde.appendChild(divLine);
   divResponde.appendChild(title);
   divResponde.appendChild(img);
   divResponde.appendChild(p);
-};
+}
 
-function respondeWithGifos (){
-  divResponde.innerHTML = '';
-  const divLine = document.createElement('div');
-  divLine.classList.add('line');
-  const title = document.createElement('h2');
-  title.classList.add('text-body');
+function respondeWithGifos() {
+  divResponde.innerHTML = "";
+  const divLine = document.createElement("div");
+  divLine.classList.add("line");
+  const title = document.createElement("h2");
+  title.classList.add("text-body");
   title.innerText = q;
-  const ul = document.createElement('ul');
-  ul.classList.add('responde-list');
-  ul.id = 'ul-search-gifos-responde';
+  const ul = document.createElement("ul");
+  ul.classList.add("responde-list");
+  ul.id = "ul-search-gifos-responde";
   divResponde.appendChild(divLine);
   divResponde.appendChild(title);
   divResponde.appendChild(ul);
-};
+}
 
 export async function sendApiRequest() {
-  fetch(api_search)
-    .then(function (respondeSearch) {
-      return respondeSearch.json();
-    })
-    .then(function (json) {
-      const data = json.data;
+  try {
+    fetch(api_search)
+      .then(function (respondeSearch) {
+        return respondeSearch.json();
+      })
+      .then(function (json) {
+        const data = json.data;
 
-      if(data.length === 0) {
-        respondeWithoutGifos();
-      }
+        if (data.length === 0) {
+          respondeWithoutGifos();
+        }
 
-      if(data.length > 0) {
-        divResponde.innerHTML = '';
-        respondeWithGifos();
-        let initialPosition = 0;
-        let size = 12;
-        let nextGifos = data.splice(initialPosition, size);
-        nextGifos.forEach(addGifo);
-
-        const btn = document.createElement('button');
-        btn.classList.add('text-body');
-        btn.id = 'btn-search-gifos-responde';
-        btn.textContent = 'ver más';
-        divResponde.appendChild(btn);
-                
-        btn.addEventListener('click', () => {
+        if (data.length > 0) {
+          divResponde.innerHTML = "";
+          respondeWithGifos();
+          let initialPosition = 0;
+          let size = 12;
           let nextGifos = data.splice(initialPosition, size);
           nextGifos.forEach(addGifo);
-          if (data.length === 0) {
-            btn.style.display = 'none';
-          }
-        })
 
-      }
+          const btn = document.createElement("button");
+          btn.classList.add("text-body");
+          btn.id = "btn-search-gifos-responde";
+          btn.textContent = "ver más";
+          divResponde.appendChild(btn);
 
-    })
+          btn.addEventListener("click", () => {
+            let nextGifos = data.splice(initialPosition, size);
+            nextGifos.forEach(addGifo);
+            if (data.length === 0) {
+              btn.style.display = "none";
+            }
+          });
+        }
+      })
 
-    .catch(function (err) {
-      console.log(err.message);
-    });
+      .catch(function (err) {
+        console.log(err.message);
+      });
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 const searchGifos = async (searchText) => {
-  const res = await fetch(
-    `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=4`
-  );
-  const gifos = await res.json();
-  suggestion.innerHTML = "";
+  try {
+    const res = await fetch(
+      `https://api.giphy.com/v1/gifs/search/tags?api_key=${api_key}&q=${searchText}&limit=4`
+    );
+    const gifos = await res.json();
+    suggestion.innerHTML = "";
 
-  gifos.data.forEach(function (obj) {
-    let tagImg = document.createElement("img");
-    let tag = document.createElement("li");
-    let textSuggestion = document.createTextNode(obj.name);
+    gifos.data.forEach(function (obj) {
+      let tagImg = document.createElement("img");
+      let tag = document.createElement("li");
+      let textSuggestion = document.createTextNode(obj.name);
 
-    tag.addEventListener("click", () => {
-      search.value = obj.name;
-      btnSearch.click();
+      tag.addEventListener("click", () => {
+        search.value = obj.name;
+        btnSearch.click();
+      });
+
+      tag.appendChild(textSuggestion);
+      suggestion.appendChild(tagImg);
+      suggestion.appendChild(tag);
     });
-
-    tag.appendChild(textSuggestion);
-    suggestion.appendChild(tagImg);
-    suggestion.appendChild(tag);
-  });
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 search.addEventListener("keyup", (e) => {
