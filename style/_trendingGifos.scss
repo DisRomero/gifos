@@ -75,14 +75,19 @@
       // margin-right: 2%; //29px
       min-width: 15.18em; //243
       margin-left: 0;
-      margin-right: -2em; //1.37em; //22px;
+      margin-right: 1.37em; //22px;
       height: 100%;
       overflow: hidden;
+
       .slider-image {
         // display: block;
         // width: 11.62em; //14.62em; //243px;
         // height: 11.68em; //187px;
         // object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
       }
       .slider-image:hover {
         content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
