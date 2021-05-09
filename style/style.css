@@ -1,3 +1,7 @@
+/*
+      opacity: 0.6;
+background: #572EE5;
+*/
 body {
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
@@ -586,6 +590,12 @@ body.dark-mode .search-gifos-responde h2 {
   height: 7.5em;
 }
 
+.search-gifos-responde .responde-list img:hover {
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 0.6;
+  z-index: 1;
+}
+
 .search-gifos-responde button {
   width: 7.93em;
   height: 3.12em;
@@ -659,8 +669,8 @@ body.dark-mode .search-gifos-responde button {
 .trending-gifos {
   background-color: #f3f5f8;
   padding-top: 2.87em;
-  height: 26.87em;
   margin-top: 2.43em;
+  padding-bottom: 5.12em;
 }
 
 body.dark-mode .trending-gifos {
@@ -695,17 +705,6 @@ body.dark-mode .trending-gifos .text-trending {
   text-transform: uppercase;
 }
 
-/*
-<div id="container" class="container">
-        <button class="slider-btn btn-left" id="btn-left"><</button>
-        <div class="slider" id="slider"></div>
-        <button class="slider-btn btn-right" id="btn-right">></button>
-      </div>
-      <div class="controles">
-        <button id="play">Play</button>
-        <button id="stop" disabled>Stop</button>
-      </div>
-      */
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -742,17 +741,32 @@ body.dark-mode .trending-gifos .text-trending {
 }
 
 .container .slider .slider-image:hover {
-  content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
+  background-color: rgba(87, 46, 229, 0.6);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.container .slider .slider-image:hover ul {
+  display: inline-block;
+}
+
+.container .slider ul {
+  display: none;
 }
 
 .container .slider-btn {
   background-color: #f3f5f8;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #572ee5;
+  width: 2.5em;
+  height: 2.5em;
+  border: 0.06em solid #572ee5;
   color: #572ee5;
   cursor: pointer;
   z-index: 1;
+}
+
+body.dark-mode .container .slider-btn {
+  color: #000000;
+  border-color: #000000;
 }
 
 .container .slider-btn:hover {
@@ -802,12 +816,13 @@ body.dark-mode .trending-gifos .text-trending {
   }
   .container .btn-left {
     display: block;
-    margin-right: 22px;
+    margin-left: 0.87em;
+    margin-right: 1.37em;
   }
   .container .btn-right {
     display: block;
-    margin-left: 25px;
-    margin-right: 1%;
+    margin-left: 1.56em;
+    margin-right: 0.75em;
   }
 }
 

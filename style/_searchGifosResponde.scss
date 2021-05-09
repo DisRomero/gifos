@@ -34,6 +34,18 @@
       width: 8.5em;
       height: 7.5em;
     }
+    img:hover {
+      background-color: $hover-image;
+      opacity: 0.6;
+      z-index: 1;
+      // &:before {
+      //   content: "";
+      // }
+
+      // &:after {
+      //     content: "* * *";
+      // }
+    }
   }
   button {
     width: 7.93em;

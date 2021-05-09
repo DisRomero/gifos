@@ -1,8 +1,8 @@
 .trending-gifos {
   background-color: $background-trending-gifos;
   padding-top: 2.87em; //46px;
-  height: 26.87em; //430px;
   margin-top: 2.43em; //39px;
+  padding-bottom: 5.12em; //82px;
   //dark-mode
   body.dark-mode & {
     background-color: $background-trending-gifos-dark-mode;
@@ -32,26 +32,13 @@
     }
   }
 }
-/*
-<div id="container" class="container">
-        <button class="slider-btn btn-left" id="btn-left"><</button>
-        <div class="slider" id="slider"></div>
-        <button class="slider-btn btn-right" id="btn-right">></button>
-      </div>
-      <div class="controles">
-        <button id="play">Play</button>
-        <button id="stop" disabled>Stop</button>
-      </div>
-      */
+
 .container {
   max-width: 100%;
   margin: 0 auto;
   padding-right: 1em;
   padding-left: 1em;
-
   .slider {
-    //width: 100%;
-    //height: 200px;
     background-size: cover;
     overflow: hidden;
     display: flex;
@@ -60,25 +47,46 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: auto;
-    //white-space: nowrap;
+
     .slider-image {
       width: 15.18em; //243px;
       height: 11.68em; //187px;
       margin-right: 1.37em; //22px;
     }
+
     .slider-image:hover {
-      content: url("/assets/img/CTA-crar-gifo-modo-noc.svg");
+      background-color: $hover-image;
+      opacity: 0.6;
+      z-index: 1;
+      ul {
+        display: inline-block; ///validate who to display the btns
+      }
+      // &:before {
+      //   content: "";
+      // }
+
+      // &:after {
+      //     content: "* * *";
+      // }
+    }
+    ul {
+      display: none;
     }
   }
 
   .slider-btn {
     background-color: $background-trending-gifos;
-    width: 40px;
-    height: 40px;
-    border: 1px solid $line-color;
+    width: 2.5em; //40px;
+    height: 2.5em;
+    border: 0.06em solid $line-color;
     color: $line-color;
     cursor: pointer;
     z-index: 1;
+    //dark-mode
+    body.dark-mode & {
+      color: $black-color;
+      border-color: $black-color;
+    }
   }
   .slider-btn:hover {
     background-color: $line-color;
@@ -117,20 +125,19 @@
 
   .container {
     display: flex;
-    //justify-content: center;
     .slider {
       overflow-x: hidden;
     }
     align-items: center;
     .btn-left {
       display: block;
-      // margin-left: 5%; //1%; //94px;
-      margin-right: 22px;
+      margin-left: 0.87em; //5.87em; //5%; //1%; //94px;
+      margin-right: 1.37em; //22px;
     }
     .btn-right {
       display: block;
-      margin-left: 25px;
-      margin-right: 1%; //92px;
+      margin-left: 1.56em; //25px;
+      margin-right: 0.75em; //5.75em; //1%; //92px;
     }
   }
 }

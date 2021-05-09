@@ -1,5 +1,6 @@
 $line-color: #572ee5;
 $menu-mobile-color-hover: rgba(87, 46, 229, 0.9);
+$hover-image: rgba(87, 46, 229, 0.6);
 $white-color: #ffffff;
 $link-hover-color: #5ed7c6;
 $txt-fail-responde: #50e3c2;
@@ -10,6 +11,11 @@ $background-trending-gifos: #f3f5f8;
 $background-trending-gifos-dark-mode: #222326;
 $font-montserrat: "Montserrat", sans-serif;
 $font-roboto: "Roboto", sans-serif;
+
+/*
+      opacity: 0.6;
+background: #572EE5;
+*/
 
 @import "header";
 @import "searchGifos";
