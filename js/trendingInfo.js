@@ -22,5 +22,4 @@ function trendingTag() {
       console.log(err.message);
     });
 }
-
-document.addEventListener("DOMContenLoaded", trendingTag());
+trendingTag();
