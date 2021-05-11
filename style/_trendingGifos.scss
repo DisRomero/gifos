@@ -2,7 +2,6 @@
   background-color: $background-trending-gifos;
   padding-top: 2.87em; //46px;
   margin-top: 2.43em; //39px;
-  //padding-bottom: 5.12em; //82px;
   //dark-mode
   body.dark-mode & {
     background-color: $background-trending-gifos-dark-mode;
@@ -38,7 +37,6 @@
   margin: 0 auto;
   padding-right: 1em;
   padding-left: 1em;
-  //margin-bottom: 5.12em;
   height: 20.31em;
   .slider {
     background-size: cover;
@@ -49,91 +47,7 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: auto;
-
-    // .div-slider {
-    //   // width: 15.18em; //243px;
-    //   // height: 11.68em; //187px;
-    //   margin-right: 1.37em; //22px;
-
-    //   .slider-image {
-    //     width: 15.18em; //243px;
-    //     height: 11.68em; //187px;
-    //     //margin-right: 0.8em; //22px;
-    //   }
-    //   .container-btns-hover,
-    //   .cards--three__rect-1 {
-    //     display: none;
-    //   }
-    // }
-
-    // & :hover {
-    //   z-index: 10;
-    //   background: $line-color;
-    //   opacity: 0.6;
-
-    //   height: 11.68em;
-    //   /////
-
-    //   .container-btns-hover {
-    //     display: block;
-    //     li {
-    //       transform: translate(110px, -180px);
-    //       display: inline-block;
-
-    //       button {
-    //         width: 32px;
-    //         height: 32px;
-    //         border-radius: 6px;
-    //         color: $line-color;
-    //         background-color: $white-color;
-    //         margin-right: 10px;
-    //         border: none;
-    //       }
-    //     }
-    //   }
-    //   .cards--three__rect-1 {
-    //     display: block;
-    //     //left: 10%;
-    //     transform: translateY(-100px);
-    //     color: $white-color;
-    //     text-transform: capitalize;
-
-    //     .shadow-1 {
-    //       //
-    //       //left: -20%;
-    //     }
-    //     p {
-    //       margin-bottom: 5px;
-    //       margin-left: 15px;
-    //     }
-
-    //     :nth-child(3) {
-    //       font-weight: bold;
-    //       width: 90%;
-    //     }
-    //   }
-    // }
   }
-
-  // .slider-btn {
-  //   background-color: $background-trending-gifos;
-  //   width: 2.5em; //40px;
-  //   height: 2.5em;
-  //   border: 0.06em solid $line-color;
-  //   color: $line-color;
-  //   cursor: pointer;
-  //   z-index: 1;
-  //   //dark-mode
-  //   body.dark-mode & {
-  //     color: $black-color;
-  //     border-color: $black-color;
-  //   }
-
-  //   &:hover {
-  //     background-color: $line-color;
-  //     color: $white-color;
-  //   }
-  // }
 
   .btn-left {
     display: none;
@@ -185,8 +99,7 @@
   }
 }
 
-/*
-    
+/* 
   @media screen and (min-width: 1023px) {
   }
   @media screen and (min-width: 1439px) {

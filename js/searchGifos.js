@@ -23,15 +23,43 @@ function getValues() {
 function addGifo(gifo) {
   const listResponde = document.getElementById("ul-search-gifos-responde");
   let tagLiResponde = document.createElement("li");
-  const div = document.createElement("div"); //
-  div.classList.add("div-slider"); //
+  tagLiResponde.classList.add("div-slider"); //
   let tagImgResponde = document.createElement("img");
   tagImgResponde.src = gifo.images.downsized.url;
-  tagLiResponde.appendChild(tagImgResponde);
-  div.appendChild(tagLiResponde); //
-  listResponde.appendChild(div);
+  const ulBtns = document.createElement('ul');
+  const LiBtnF = document.createElement("li");
+  const LiBtnD = document.createElement("li");
+  const LiBtnZ = document.createElement("li");
+  const btnFavorite = document.createElement("button");
+  const btnDownload = document.createElement("button");
+  const btnZoom = document.createElement("button");
+  btnFavorite.appendChild(document.createTextNode("<3"));
+  btnFavorite.classList.add("btn-favorite");
+  btnDownload.appendChild(document.createTextNode("D"));
+  btnDownload.classList.add("btn-download");
+  btnZoom.appendChild(document.createTextNode("Z"));
+  btnZoom.classList.add("btn-zoom");
 
-  //listResponde.appendChild(tagLiResponde);
+  LiBtnF.appendChild(btnFavorite);
+  LiBtnD.appendChild(btnDownload);
+  LiBtnZ.appendChild(btnZoom);
+  ulBtns.appendChild(LiBtnF);
+  ulBtns.appendChild(LiBtnD);
+  ulBtns.appendChild(LiBtnZ);
+
+
+  tagLiResponde.appendChild(tagImgResponde);
+  tagLiResponde.appendChild(ulBtns);
+  listResponde.appendChild(tagLiResponde);
+/**
+ * div-slider
+ *  img
+ *  ul
+ *    li
+ *      button
+ *  span
+ *    p
+ */
 }
 
 function respondeWithoutGifos() {

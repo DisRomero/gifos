@@ -8,8 +8,9 @@
     height: 11.68em; //187px;
     //margin-right: 0.8em; //22px;
   }
+  ul,
   .container-btns-hover,
-  .cards--three__rect-1 {
+  .span-text {
     display: none;
   }
 
@@ -19,6 +20,23 @@
     opacity: 0.6;
     height: 11.68em;
 
+    ul {
+      display: block;
+      li {
+        transform: translate(110px, -180px);
+        display: inline-block;
+
+        button {
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          color: $line-color;
+          background-color: $white-color;
+          margin-right: 10px;
+          border: none;
+        }
+      }
+    }
     .container-btns-hover {
       display: block;
       li {
@@ -36,17 +54,13 @@
         }
       }
     }
-    .cards--three__rect-1 {
+    .span-text {
       display: block;
       //left: 10%;
       transform: translateY(-100px);
       color: $white-color;
       text-transform: capitalize;
 
-      .shadow-1 {
-        //
-        //left: -20%;
-      }
       p {
         margin-bottom: 5px;
         margin-left: 15px;
@@ -70,13 +84,13 @@
   z-index: 1;
   //dark-mode
   body.dark-mode & {
-    color: $black-color;
-    border-color: $black-color;
-  }
-
-  &:hover {
-    background-color: $line-color;
+    background-color: $body-dark-color;
     color: $white-color;
+    border-color: $white-color;
+    &:hover {
+      background-color: $white-color;
+      color: $black-color;
+    }
   }
 }
 

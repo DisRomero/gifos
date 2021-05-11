@@ -6,18 +6,38 @@ import { sendApiRequest } from "./searchGifos.js";
 import * as trendingTag from "./trendingInfo.js";
 import { getImages } from "./trendingGifos.js"
 
-/////fetch gif treding
-// const trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=1`;
+/**
+ * /////////
+        const attachHover = (imgContainer) =>{
+          
+          return () => {
+            console.log(imgContainer.length)
+            const ulBtns = document.createElement("ul");
+            const LiBtnF = document.createElement("li");
+            const btnFavorite = document.createElement("button");
+            btnFavorite.appendChild(document.createTextNode("<3"));
+            btnFavorite.classList.add("btn-favorite");
+            LiBtnF.appendChild(btnFavorite);
+            ulBtns.appendChild(LiBtnF);
 
-// fetch(trending)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     //console.log(data);
-//     //console.log('META', data.meta)
-//     let url_img = data.data[0].images.downsized_large.url;
-//     //console.log(url_img);
-//     let imgGifo = document.createElement("img");
-//     imgGifo.src = url_img;
-//     //document.getElementById("test").appendChild(imgGifo);
-//   })
-//   .catch((err) => console.log(err));
+            const span = document.createElement('span');
+            const userName = document.createElement("p");
+            const userTittle = document.createElement("p");
+            userName.innerText = e.username;
+            userTittle.innerText = e.title;
+            span.appendChild(username)
+            span.appendChild(userTittle)
+
+
+            imgContainer.appendChild(ulBtns);
+            imgContainer.appendChild(span)
+          }
+        }
+
+        const divs = document.getElementsByClassName("div-slider");
+        for (const item of divs) {
+          //item.addEventListener('click', attachHover(item))
+        }
+        /////////////////////
+        
+ */
