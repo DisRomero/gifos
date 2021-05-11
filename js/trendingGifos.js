@@ -29,7 +29,7 @@ export function getImages() {
   }
 }
 
-const createElemntHover = (e) => {
+const createElemntHover = (gifos) => {
   const div = document.createElement("div");
   const img = document.createElement("img");
   div.classList.add("div-slider");
@@ -38,7 +38,8 @@ const createElemntHover = (e) => {
   img.src = urlStirng;
 
   div.appendChild(img);
-//==========
+//==========//llamo y envio gifos a funcion nueva
+
   const ulBtns = document.createElement("ul");
   ulBtns.classList.add("container-btns-hover");
 
@@ -66,8 +67,8 @@ const createElemntHover = (e) => {
   span.classList.add("span-text");
   const userName = document.createElement("p");
   const userTittle = document.createElement("p");
-  userName.innerText = e.username;
-  userTittle.innerText = e.title;
+  userName.innerText = gifos.username;
+  userTittle.innerText = gifos.title;
 
   span.appendChild(userName);
   span.appendChild(userTittle);
