@@ -23,10 +23,15 @@ function getValues() {
 function addGifo(gifo) {
   const listResponde = document.getElementById("ul-search-gifos-responde");
   let tagLiResponde = document.createElement("li");
+  const div = document.createElement("div"); //
+  div.classList.add("div-slider"); //
   let tagImgResponde = document.createElement("img");
   tagImgResponde.src = gifo.images.downsized.url;
   tagLiResponde.appendChild(tagImgResponde);
-  listResponde.appendChild(tagLiResponde);
+  div.appendChild(tagLiResponde); //
+  listResponde.appendChild(div);
+
+  //listResponde.appendChild(tagLiResponde);
 }
 
 function respondeWithoutGifos() {
