@@ -17,7 +17,7 @@ export function getImages() {
 
         if (data.length > 0) {
           slider.innerHTML = "";
-          data.forEach(createElemntHover);
+          data.forEach(createImage);
         }
       })
 
@@ -29,39 +29,49 @@ export function getImages() {
   }
 }
 
-const createElemntHover = (gifos) => {
+const createImage = (gifos) => {
   const div = document.createElement("div");
   const img = document.createElement("img");
   div.classList.add("div-slider");
   img.classList.add("slider-image");
-  let urlStirng = e.images.downsized.url;
+  let urlStirng = gifos.images.downsized.url;
   img.src = urlStirng;
 
   div.appendChild(img);
-//==========//llamo y envio gifos a funcion nueva
+  slider.appendChild(div);
+  createElemntHover(gifos, div, slider);
+};
 
+export const createElemntHover = (gifos, div, slider) => {
   const ulBtns = document.createElement("ul");
   ulBtns.classList.add("container-btns-hover");
 
-  const LiBtnF = document.createElement("li");
-  const LiBtnD = document.createElement("li");
-  const LiBtnZ = document.createElement("li");
+  const LiBtnFavorite = document.createElement("li");
+  const LiBtnDownload = document.createElement("li");
+  const LiBtnExpand = document.createElement("li");
   const btnFavorite = document.createElement("button");
   const btnDownload = document.createElement("button");
-  const btnZoom = document.createElement("button");
-  btnFavorite.appendChild(document.createTextNode("<3"));
-  btnFavorite.classList.add("btn-favorite");
-  btnDownload.appendChild(document.createTextNode("D"));
-  btnDownload.classList.add("btn-download");
-  btnZoom.appendChild(document.createTextNode("Z"));
-  btnZoom.classList.add("btn-zoom");
+  const btnExpand = document.createElement("button");
+  const imgFavorite = document.createElement("img");
+  imgFavorite.src = "assets/img/icon-fav.svg";
+  const imgDownload = document.createElement("img");
+  imgDownload.src = "assets/img/icon-download.svg";
+  const imgExpand = document.createElement("img");
+  imgExpand.src = "assets/img/icon-max-normal.svg";
 
-  LiBtnF.appendChild(btnFavorite);
-  LiBtnD.appendChild(btnDownload);
-  LiBtnZ.appendChild(btnZoom);
-  ulBtns.appendChild(LiBtnF);
-  ulBtns.appendChild(LiBtnD);
-  ulBtns.appendChild(LiBtnZ);
+  btnFavorite.appendChild(imgFavorite);
+  btnFavorite.classList.add("btn-favorite");
+  btnDownload.appendChild(imgDownload);
+  btnDownload.classList.add("btn-download");
+  btnExpand.appendChild(imgExpand);
+  btnExpand.classList.add("btn-expand");
+
+  LiBtnFavorite.appendChild(btnFavorite);
+  LiBtnDownload.appendChild(btnDownload);
+  LiBtnExpand.appendChild(btnExpand);
+  ulBtns.appendChild(LiBtnFavorite);
+  ulBtns.appendChild(LiBtnDownload);
+  ulBtns.appendChild(LiBtnExpand);
 
   const span = document.createElement("span");
   span.classList.add("span-text");
@@ -72,12 +82,10 @@ const createElemntHover = (gifos) => {
 
   span.appendChild(userName);
   span.appendChild(userTittle);
-
   div.appendChild(ulBtns);
   div.appendChild(span);
 
   slider.appendChild(div);
-  //https://codepen.io/chhiring90/pen/zLJLBG
 };
 
 const nextImages = () => {

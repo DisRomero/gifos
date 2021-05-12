@@ -22,7 +22,7 @@
   }
   .responde-list {
     width: 90%;
-    margin-left: -0.5em;
+    margin-left: 2%;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -30,17 +30,48 @@
     grid-template-rows: 7.5em 7.5em;
     column-gap: 0.5em;
     row-gap: 0.5em;
-    li {
-      margin-left: 15%;
+
+    .div-slider {
+      margin-right: auto;
+      width: auto;
+      height: auto;
+      &:hover {
+        width: 8.5em;
+        height: 7.5em;
+
+        .container-btns-hover li {
+          transform: translate(3.75em, -10.31em); //(60px, -165px);
+        }
+        .container-btns-hover button {
+          width: 1.2em;
+          height: 1.2em;
+          margin-right: 0.31em;
+        }
+
+        .container-btns-hover button img {
+          color: $line-color;
+          width: 1.2em;
+          height: 1.2em;
+        }
+
+        .span-text {
+          transform: translateY(-10em); //(-160px);
+          font-size: smaller;
+        }
+
+        .span-text p {
+          margin-left: 0.31em; //5px;
+        }
+      }
     }
     img {
       width: 8.5em;
       height: 7.5em;
-    }
-    img:hover {
-      background-color: $line-color;
-      opacity: 0.6;
-      z-index: 1;
+      &:hover {
+        background-color: $line-color;
+        opacity: 0.6;
+        z-index: 1;
+      }
     }
   }
   button {
@@ -80,6 +111,17 @@
     .responde-list {
       grid-template-columns: 25% 25% 25% 25%;
       grid-template-rows: 8.5em 8.5em;
+
+      .div-slider {
+        &:hover {
+          width: 10.2em;
+          height: 7.5em;
+
+          .container-btns-hover li {
+            transform: translate(5.75em, -10.31em);
+          }
+        }
+      }
       li {
         margin-left: 0;
       }
@@ -103,6 +145,31 @@
   .search-gifos-responde {
     .responde-list {
       grid-template-rows: 9.5em 9.5em;
+      margin-left: 0%;
+
+      .div-slider {
+        &:hover {
+          width: 14.5em;
+          height: 8.5em;
+
+          .container-btns-hover li {
+            transform: translate(6em, -11em);
+          }
+
+          .container-btns-hover button {
+            width: 2.2em;
+            height: 2.2em;
+            img {
+              width: 2.2em;
+              height: 2.2em;
+            }
+          }
+
+          .span-text {
+            transform: translateY(-12em);
+          }
+        }
+      }
       img {
         width: 14.25em;
         height: 8.5em;
@@ -115,6 +182,31 @@
   .search-gifos-responde {
     .responde-list {
       grid-template-rows: 13.5em 13.5em;
+
+      .div-slider {
+        &:hover {
+          width: 16.5em;
+          height: 12.5em;
+
+          .container-btns-hover li {
+            transform: translate(8em, -15em);
+          }
+
+          // .container-btns-hover button {
+          //   width: 2.2em;
+          //   height: 2.2em;
+          //   // img {
+          //   //   width: 2.2em;
+          //   //   height: 2.2em;
+          //   // }
+          // }
+
+          .span-text {
+            transform: translateY(-8em);
+            font-size: x-large;
+          }
+        }
+      }
       img {
         width: 16.25em;
         height: 12.5em;

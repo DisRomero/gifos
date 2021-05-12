@@ -4,7 +4,7 @@ const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 import { checkMode } from "./darkMode.js";
 import { sendApiRequest } from "./searchGifos.js";
 import * as trendingTag from "./trendingInfo.js";
-import { getImages } from "./trendingGifos.js"
+import { getImages } from "./trendingGifos.js";
 
 /**
  * /////////
