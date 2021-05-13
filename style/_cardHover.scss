@@ -136,35 +136,35 @@
       border: 0.06em solid $black-color;
     }
   }
-}
 
-.btn-left {
-  display: block;
-  img {
-    body.dark-mode & {
-      content: url("../assets/img/button-slider-left-md-noct.svg");
-      &:hover {
-        background-color: $white-color;
-        content: url("../assets/img/button-slider-left.svg");
+  .btn-left {
+    display: block;
+    img {
+      body.dark-mode & {
+        content: url("../assets/img/button-slider-left-md-noct.svg");
+        &:hover {
+          background-color: $white-color;
+          content: url("../assets/img/button-slider-left.svg");
+        }
       }
-    }
-    &:hover {
-      content: url("../assets/img/button-slider-left-hover.svg");
+      &:hover {
+        content: url("../assets/img/button-slider-left-hover.svg");
+      }
     }
   }
-}
-.btn-right {
-  display: block;
-  img {
-    body.dark-mode & {
-      content: url("../assets/img/button-slider-right-md-noct.svg");
-      &:hover {
-        background-color: $white-color;
-        content: url("../assets/img/Button-Slider-right.svg");
+  .btn-right {
+    display: block;
+    img {
+      body.dark-mode & {
+        content: url("../assets/img/button-slider-right-md-noct.svg");
+        &:hover {
+          background-color: $white-color;
+          content: url("../assets/img/Button-Slider-right.svg");
+        }
       }
-    }
-    &:hover {
-      content: url("../assets/img/Button-Slider-right-hover.svg");
+      &:hover {
+        content: url("../assets/img/Button-Slider-right-hover.svg");
+      }
     }
   }
 }

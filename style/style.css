@@ -711,7 +711,7 @@ body.dark-mode .search-gifos-responde button:hover {
     margin-left: 0%;
   }
   .search-gifos-responde .responde-list .div-slider:hover {
-    width: 14.5em;
+    width: 14.2em;
     height: 8.5em;
   }
   .search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li {
@@ -742,7 +742,7 @@ body.dark-mode .search-gifos-responde button:hover {
         grid-template-rows: 13.5em 13.5em;
   }
   .search-gifos-responde .responde-list .div-slider:hover {
-    width: 16.5em;
+    width: 16.2em;
     height: 12.5em;
   }
   .search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li {
@@ -1008,40 +1008,32 @@ body.dark-mode .slider-btn:hover {
     color: #000000;
     border: 0.06em solid #000000;
   }
-}
-
-.btn-left {
-  display: block;
-}
-
-body.dark-mode .btn-left img {
-  content: url("../assets/img/button-slider-left-md-noct.svg");
-}
-
-body.dark-mode .btn-left img:hover {
-  background-color: #ffffff;
-  content: url("../assets/img/button-slider-left.svg");
-}
-
-.btn-left img:hover {
-  content: url("../assets/img/button-slider-left-hover.svg");
-}
-
-.btn-right {
-  display: block;
-}
-
-body.dark-mode .btn-right img {
-  content: url("../assets/img/button-slider-right-md-noct.svg");
-}
-
-body.dark-mode .btn-right img:hover {
-  background-color: #ffffff;
-  content: url("../assets/img/Button-Slider-right.svg");
-}
-
-.btn-right img:hover {
-  content: url("../assets/img/Button-Slider-right-hover.svg");
+  .btn-left {
+    display: block;
+  }
+  body.dark-mode .btn-left img {
+    content: url("../assets/img/button-slider-left-md-noct.svg");
+  }
+  body.dark-mode .btn-left img:hover {
+    background-color: #ffffff;
+    content: url("../assets/img/button-slider-left.svg");
+  }
+  .btn-left img:hover {
+    content: url("../assets/img/button-slider-left-hover.svg");
+  }
+  .btn-right {
+    display: block;
+  }
+  body.dark-mode .btn-right img {
+    content: url("../assets/img/button-slider-right-md-noct.svg");
+  }
+  body.dark-mode .btn-right img:hover {
+    background-color: #ffffff;
+    content: url("../assets/img/Button-Slider-right.svg");
+  }
+  .btn-right img:hover {
+    content: url("../assets/img/Button-Slider-right-hover.svg");
+  }
 }
 
 /* 
