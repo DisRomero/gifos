@@ -54,6 +54,18 @@
           height: 1.2em;
         }
 
+        .container-btns-hover .btn-favorite {
+          &:active {
+            //width: 2em;
+            opacity: 1;
+            img {
+              width: 70%;
+              margin: 0;
+              height: inherit;
+            }
+          }
+        }
+
         .span-text {
           transform: translateY(-10em); //(-160px);
           font-size: smaller;
