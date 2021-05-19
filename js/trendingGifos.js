@@ -1,3 +1,5 @@
+import { addGifoFavorite } from "./btnsFunction.js";
+
 const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 const api_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=6`;
 const slider = document.getElementById("slider");
@@ -65,6 +67,8 @@ export const createElemntHover = (gifos, div, slider) => {
   btnDownload.classList.add("btn-download");
   btnExpand.appendChild(imgExpand);
   btnExpand.classList.add("btn-expand");
+
+  btnFavorite.addEventListener('click', addGifoFavorite);////
 
   LiBtnFavorite.appendChild(btnFavorite);
   LiBtnDownload.appendChild(btnDownload);

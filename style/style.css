@@ -595,28 +595,26 @@ body.dark-mode .search-gifos-responde h2 {
 .search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li {
   -webkit-transform: translate(3.75em, -10.31em);
           transform: translate(3.75em, -10.31em);
-}
-
-.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover button {
   width: 1.2em;
   height: 1.2em;
   margin-right: 0.31em;
 }
 
-.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover button img {
-  color: #572ee5;
+.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li .active img {
+  width: 1em;
+  height: 1em;
+  content: url("../assets/img/icon-fav-active.svg");
+  margin: 0.1em;
+}
+
+.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li button {
   width: 1.2em;
   height: 1.2em;
 }
 
-.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover .btn-favorite:active {
-  opacity: 1;
-}
-
-.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover .btn-favorite:active img {
-  width: 70%;
-  margin: 0;
-  height: inherit;
+.search-gifos-responde .responde-list .div-slider:hover .container-btns-hover li button img {
+  width: 1.2em;
+  height: 1.2em;
 }
 
 .search-gifos-responde .responde-list .div-slider:hover .span-text {
@@ -923,6 +921,24 @@ body.dark-mode .trending-gifos .text-trending {
   display: inline-block;
 }
 
+.div-slider:hover .container-btns-hover li .btn-favorite:active {
+  opacity: 1;
+}
+
+.div-slider:hover .container-btns-hover li .btn-favorite:active img {
+  width: 1.6em;
+  height: 1.5em;
+  content: url("../assets/img/icon-fav-active.svg");
+  margin: 0.41em;
+}
+
+.div-slider:hover .container-btns-hover li .active img {
+  width: 1.6em;
+  height: 1.5em;
+  content: url("../assets/img/icon-fav-active.svg");
+  margin: 0.41em;
+}
+
 .div-slider:hover .container-btns-hover li button {
   border-radius: 0.37em;
   color: #572ee5;
@@ -939,17 +955,6 @@ body.dark-mode .trending-gifos .text-trending {
 
 .div-slider:hover .container-btns-hover li button img {
   color: #572ee5;
-}
-
-.div-slider:hover .container-btns-hover li .btn-favorite:active {
-  opacity: 1;
-}
-
-.div-slider:hover .container-btns-hover li .btn-favorite:active img {
-  width: 1.6em;
-  height: 1.5em;
-  content: url("../assets/img/icon-fav-active.svg");
-  margin: 0.41em;
 }
 
 .div-slider:hover .span-text {

@@ -5,7 +5,7 @@ import { checkMode } from "./darkMode.js";
 import { sendApiRequest } from "./searchGifos.js";
 import * as trendingTag from "./trendingInfo.js";
 import { getImages } from "./trendingGifos.js";
-import * as funtion from "./btnExpand.js";
+import * as funtion from "./btnsFunction.js";
 /**
  * /////////
         const attachHover = (imgContainer) =>{

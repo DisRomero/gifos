@@ -41,27 +41,25 @@
 
         .container-btns-hover li {
           transform: translate(3.75em, -10.31em); //(60px, -165px);
-        }
-        .container-btns-hover button {
           width: 1.2em;
           height: 1.2em;
           margin-right: 0.31em;
-        }
 
-        .container-btns-hover button img {
-          color: $line-color;
-          width: 1.2em;
-          height: 1.2em;
-        }
-
-        .container-btns-hover .btn-favorite {
-          &:active {
-            //width: 2em;
-            opacity: 1;
+          .active {
             img {
-              width: 70%;
-              margin: 0;
-              height: inherit;
+              width: 1em;
+              height: 1em;
+              content: url("../assets/img/icon-fav-active.svg");
+              margin: 0.1em;
+            }
+          }
+
+          button {
+            width: 1.2em;
+            height: 1.2em;
+            img {
+              width: 1.2em;
+              height: 1.2em;
             }
           }
         }

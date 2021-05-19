@@ -6,7 +6,6 @@
   .slider-image {
     width: 15.18em; //243px;
     height: 11.68em; //187px;
-    //margin-right: 0.8em; //22px;
   }
   ul,
   .container-btns-hover,
@@ -20,7 +19,7 @@
     height: 11.68em;
 
     .slider-image {
-      opacity: 0.6;
+      opacity: 0.6; //
     }
     .container-btns-hover {
       display: block;
@@ -28,15 +27,34 @@
         transform: translate(7.5em, -11.25em); //(120px, -180px);
         display: inline-block;
 
+        .btn-favorite {
+          &:active {
+            opacity: 1;
+            img {
+              width: 1.6em; //2em; //32px;
+              height: 1.5em;
+              content: url("../assets/img/icon-fav-active.svg");
+              margin: 0.41em;
+            }
+          }
+        }
+        .active {
+          img {
+            width: 1.6em; //2em; //32px;
+            height: 1.5em;
+            content: url("../assets/img/icon-fav-active.svg");
+            margin: 0.41em;
+          }
+        }
+
         button {
-          // width: 2em;
-          // height: 2em;
           border-radius: 0.37em;
           color: $line-color;
           background-color: $white-color;
           margin-right: 0.62em;
           border: none;
           opacity: 0.6;
+
           &:hover {
             opacity: 1;
             background-color: $white-color;
@@ -44,21 +62,6 @@
 
           img {
             color: $line-color;
-            // width: 1em;
-            // padding-top: 10%;
-          }
-        }
-        .btn-favorite {
-          &:active {
-            //width: 2em;
-            opacity: 1;
-            img {
-              width: 1.6em; //2em; //32px;
-              height: 1.5em;
-              content: url("../assets/img/icon-fav-active.svg");
-              //margin: 0.50em 0.25em 0.1em 0.25em; //5px 4px 0px 4px;
-              margin: 0.41em;
-            }
           }
         }
       }
@@ -98,11 +101,6 @@
 }
 
 .slider-btn {
-  // background-color: $background-trending-gifos;
-  // width: 2.5em; //40px;
-  // height: 2.5em;
-  // border: 0.06em solid $line-color;
-  // color: $line-color;
   border: none;
   cursor: pointer;
   z-index: 1;
