@@ -24,17 +24,17 @@
     .container-btns-hover {
       display: block;
       li {
-        transform: translate(7.5em, -11.25em); //(120px, -180px);
+        transform: translate(7.5em, -11.5em); //7.5em, -11.25em (120px, -180px);
         display: inline-block;
 
         .btn-favorite {
           &:active {
             opacity: 1;
             img {
-              width: 1.6em; //2em; //32px;
-              height: 1.5em;
+              // width: 1.6em; //2em; //32px;
+              // height: 1.5em;
               content: url("../assets/img/icon-fav-active.svg");
-              margin: 0.41em;
+              margin: 0.3em; //0.41em
             }
           }
         }
@@ -54,6 +54,8 @@
           margin-right: 0.62em;
           border: none;
           opacity: 0.6;
+          width: 2.4em;
+          height: 2.4em;
 
           &:hover {
             opacity: 1;

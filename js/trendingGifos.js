@@ -34,6 +34,7 @@ export function getImages() {
 const createImage = (gifos) => {
   const div = document.createElement("div");
   const img = document.createElement("img");
+  
   div.classList.add("div-slider");
   img.classList.add("slider-image");
   let urlStirng = gifos.images.downsized.url;
@@ -68,8 +69,6 @@ export const createElemntHover = (gifos, div, slider) => {
   btnExpand.appendChild(imgExpand);
   btnExpand.classList.add("btn-expand");
 
-  btnFavorite.addEventListener('click', addGifoFavorite);////
-
   LiBtnFavorite.appendChild(btnFavorite);
   LiBtnDownload.appendChild(btnDownload);
   LiBtnExpand.appendChild(btnExpand);
@@ -90,6 +89,8 @@ export const createElemntHover = (gifos, div, slider) => {
   div.appendChild(span);
 
   slider.appendChild(div);
+
+  btnFavorite.addEventListener('click', addGifoFavorite);////
 };
 
 const nextImages = () => {
