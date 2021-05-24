@@ -1,81 +1,106 @@
-export const addGifoFavorite = (gifo) => {
+export const addGifoFavorite = (btn, gifos) => {
  
-  if(gifo.path.length === 12 || gifo.path[5].className === 'responde-list'){
+  const user = gifos.username;
+  const name = gifos.title;
+  const src = gifos.images.downsized.url;
+ 
+  const DataImgFavorite = localStorage.getItem('ImgFavorite');
 
-    let btn = gifo.path[2].children[0];
-    let userName = gifo.path[4].children[2].children[0].innerText;
-    let gifName = gifo.path[4].children[2].children[1].innerText;
-    let gifSrc = gifo.path[4].children[0].currentSrc;
-    // btn.classList.add('active');
-    
-    //save img into local storage
-    let startArray =new Array();
-    let DataImgFavorite = localStorage.getItem('ImgFavorite');
-   
-    if(DataImgFavorite===null){
-      localStorage.setItem('ImgFavorite', JSON.stringify(startArray));       
-        /**  
-      startedArray.push({user: userName, 
-        name: gifName, 
-        src: gifSrc});
-
-      let newImgFavorite = {
-            user: userName, 
-            name: gifName, 
-            src: gifSrc
-          }
-
-      startedArray.unshift(newImgFavorite)
-         */
-      
-    }
-    if(DataImgFavorite!==null){
-      let dataImg = JSON.parse(DataImgFavorite);   
-      let newImgFavorite = {
-        user: userName, 
-        name: gifName, 
-        src: gifSrc
-      }
-      dataImg.push(newImgFavorite);
-      localStorage.setItem('ImgFavorite', JSON.stringify(dataImg));
-      btn.classList.add('active');
-      btn.disabled = true;
-     
-    }
+  const newImgFavorite = {
+    user, 
+    name, 
+    src
   }
+  
+  if(DataImgFavorite === null) {
+    const startArray = [];
+    startArray.push(newImgFavorite);
+    localStorage.setItem('ImgFavorite', JSON.stringify(startArray));       
+  }
+
+  if(DataImgFavorite !==null) {
+    const dataImg = JSON.parse(DataImgFavorite);   
+    dataImg.push(newImgFavorite);
+    localStorage.setItem('ImgFavorite', JSON.stringify(dataImg));
+  }
+  
+  btn.classList.add('active');
+  btn.disabled = true;
 }
 
-export const downloadGifo = (gifo) => {
-    //let imgUrl = gifo.path[4].children[0].children[0].currentSrc;//
-    let imgName = gifo.path[4].children[2].children[1].outerText;    
- 
-    let test = 'https://media4.giphy.com/media/3o6nUKYhbfKk4iRT4Q/giphy-downsized.gif?cid=8b0ba690xtdcazdemjelqls77hple5b4xaoy0092ydhirxl0&rid=giphy-downsized.gif'
-    let imgvalue = test;
-    download(imgvalue, imgName);
+
+export const downloadGifo = (gifos) => {
+  const name = gifos.title;
+  const src = gifos.images.downsized.url;
+  download(src, name);
 }
 
-function download(imgvalue, imgName){
-    // console.log('value img', imgvalue);
-    // console.log('name', imgName);
+async function download(imgValue, imgName) {
+    let encoded = await getBase64FromUrl(imgValue);
     let aTag = document.createElement('a');
-    aTag.setAttribute('href', encodeURIComponent(imgvalue));
-    // aTag.setAttribute('href', imgvalue);
+    aTag.setAttribute('href', encoded);
     aTag.setAttribute('download', imgName+'.gif');
     aTag.style.display = 'none';
-
-    // console.log('value Atag img', aTag.href);
-    // console.log('name Atag', aTag.download);
-
+    aTag.target = '_blank';
     document.body.appendChild(aTag);
     aTag.click();
-    // aTag.addEventListener("click", (event) => {
-    //     event.preventDefault();
-    // });
-    
     document.body.removeChild(aTag);
+}
 
+const getBase64FromUrl = async (url) => {
+  const data = await fetch(url);
+  const blob = await data.blob();
+  return new Promise((resolve) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(blob); 
+    reader.onloadend = () => {
+      const base64data = reader.result;   
+      resolve(base64data);
+    }
+  });
 }
 
 
+export const expandGifo = (btn, gifos) => {
+  const modal = document.getElementById("myModal");
+  const modalImg = document.getElementById("imgModal");
+  const modalSpan = document.getElementById('span-myModal');
+  const modalImgFavorite = document.getElementById('img-btn-favortite')
+  const modalSpanClose = document.getElementById('close')
+  const modalBtnDownload = document.getElementById('btn-download')
+  const modalBtnFavorite = document.getElementById('btn-favorite')
 
+  const userName = document.createElement("p");
+  const userTittle = document.createElement("p");
+
+  userName.innerText = gifos.username;
+  userTittle.innerText = gifos.title;
+
+  if(modalSpan.children.length == 0){ 
+    modalSpan.appendChild(userName);
+    modalSpan.appendChild(userTittle);
+  }
   
+  modal.style.display = "block";
+  modalImg.src = gifos.images.downsized.url;
+  const btnClass = btn.getAttribute('class');
+    
+  if (btnClass.includes('active')) {     
+    modalBtnFavorite.classList.add('active');
+    btn.disabled = true;
+    modalImgFavorite.src = '/assets/img/icon-fav-active.svg';
+  }
+
+  modalSpanClose.onclick = function() {  
+    modal.style.display = "none"; 
+  }
+  
+  modalBtnFavorite.onclick = function() {  
+    addGifoFavorite(modalBtnFavorite, gifos)
+  }
+
+  modalBtnDownload.onclick = function() {  
+    downloadGifo(gifos)
+  }
+ 
+} 

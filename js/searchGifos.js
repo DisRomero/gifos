@@ -9,12 +9,16 @@ const divResponde = document.getElementById("search-gifos-responde");
 
 import { createElemntHover } from "./trendingGifos.js";
 
-btnSearch.addEventListener("click", (event) => {
-  event.preventDefault();
-  getValues();
-  sendApiRequest();
-  suggestion.style.display = "none";
-});
+if(document.getElementById("btn-form-search")){
+  btnSearch.addEventListener("click", (event) => {
+    event.preventDefault();
+    getValues();
+    sendApiRequest();
+    suggestion.style.display = "none";
+  });
+}
+
+
 
 function getValues() {
   inputSearch = document.getElementById("input-form-search").value;
@@ -140,19 +144,23 @@ const searchGifos = async (searchText) => {
   }
 };
 
-search.addEventListener("keyup", (e) => {
-  searchGifos(e.target.value);
+if(document.getElementById("input-form-search")){
+  search.addEventListener("keyup", (e) => {
+    searchGifos(e.target.value);
+  
+    if (e.target.value === "") {
+      suggestion.style.display = "none";
+      suggestion.value = "";
+    } else {
+      suggestion.style.display = "block";
+    }
+  
+    if (e.key === "Enter") {
+      suggestion.style.display = "none";
+      getValues();
+      sendApiRequest();
+    }
+  });
+}
 
-  if (e.target.value === "") {
-    suggestion.style.display = "none";
-    suggestion.value = "";
-  } else {
-    suggestion.style.display = "block";
-  }
 
-  if (e.key === "Enter") {
-    suggestion.style.display = "none";
-    getValues();
-    sendApiRequest();
-  }
-});

@@ -1,0 +1,89 @@
+// .fb {
+//   content: url("/assets/img/icon_facebook.svg");
+//   &:hover {
+//     content: url("/assets/img/icon_facebook_hover.svg");
+//     //dark mode
+//     body.dark-mode & {
+//       content: url("/assets/img/icon_facebook_noc.svg");
+//     }
+//   }
+// }
+
+.favorite-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.4%;
+  margin-top: 0.8%;
+
+  img {
+    margin-bottom: 0.4%;
+  }
+
+  .text-body {
+    width: 38.1%;
+    text-transform: capitalize;
+  }
+
+  div {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7.7%;
+  }
+
+  #fav-section-without-content {
+    img {
+      width: 25.4%;
+      height: 10.7%;
+      margin-top: 2.4%;
+      margin-bottom: 1.7%;
+    }
+    p {
+      font-size: 1em;
+      color: $txt-fail-responde;
+      line-height: 2.063em;
+      width: 100%;
+      text-transform: none;
+    }
+  }
+}
+.favorite-icon {
+  width: 7.5%;
+  height: 1.1%;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-conten {
+    .favorite {
+      color: $link-active-color;
+      body.dark-mode & {
+        color: $link-active-color;
+      }
+    }
+  }
+
+  .favorite-section {
+    img {
+      width: 3.7%;
+      margin-bottom: 0.6%;
+    }
+
+    #fav-section-without-content {
+      img {
+        width: 50%;
+      }
+
+      p {
+        font-size: 1.375em;
+      }
+    }
+  }
+}
+/* 
+  @media screen and (min-width: 1023px) {
+  }
+  @media screen and (min-width: 1439px) {
+  }
+  */

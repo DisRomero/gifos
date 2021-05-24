@@ -1,5 +1,7 @@
 import { addGifoFavorite } from "./btnsFunction.js";
 import { downloadGifo } from "./btnsFunction.js";
+import { expandGifo } from "./btnsFunction.js";
+
 
 const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 const api_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=6`;
@@ -44,6 +46,7 @@ const createImage = (gifos) => {
   div.appendChild(img);
   slider.appendChild(div);
   createElemntHover(gifos, div, slider);
+  img.addEventListener('touchstart', () => { return expandGifo(div, gifos)});
 };
 
 export const createElemntHover = (gifos, div, slider) => {
@@ -91,8 +94,9 @@ export const createElemntHover = (gifos, div, slider) => {
 
   slider.appendChild(div);
 
-  btnFavorite.addEventListener('click', addGifoFavorite);////
-  btnDownload.addEventListener('click', downloadGifo)
+  btnFavorite.addEventListener('click', () => { return addGifoFavorite(btnFavorite, gifos) });////
+  btnDownload.addEventListener('click', () => downloadGifo(gifos));
+  btnExpand.addEventListener('click', () => { return expandGifo(btnFavorite, gifos)});
 };
 
 const nextImages = () => {

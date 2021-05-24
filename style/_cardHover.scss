@@ -15,7 +15,7 @@
 
   &:hover {
     background: $line-color;
-    z-index: 10;
+    z-index: 2;
     height: 11.68em;
 
     .slider-image {
@@ -31,8 +31,6 @@
           &:active {
             opacity: 1;
             img {
-              // width: 1.6em; //2em; //32px;
-              // height: 1.5em;
               content: url("../assets/img/icon-fav-active.svg");
               margin: 0.3em; //0.41em
             }
@@ -86,20 +84,6 @@
       }
     }
   }
-  // .container-btns-hover {
-  //   .btn-favorite {
-  //     // &:hover {
-  //     //   content: url("../assets/img/icon-fav-hover.svg");
-  //     //   background-color: $white-color;
-  //     // }
-  //     // &:active {
-  //     //   content: url("../assets/img/icon-fav-active.svg");
-  //     // }
-  //   }
-  //   // .btn-download{
-
-  //   // }
-  // }
 }
 
 .slider-btn {
@@ -168,10 +152,3 @@
     }
   }
 }
-
-/* 
-  @media screen and (min-width: 1023px) {
-  }
-  @media screen and (min-width: 1439px) {
-  }
-  */
