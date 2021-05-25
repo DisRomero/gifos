@@ -63,7 +63,7 @@
 
     //dark mode
     body.dark-mode & {
-      content: url("/assets/img/icon-search-modo-noct.svg");
+      content: url("../assets/img/icon-search-modo-noct.svg");
     }
   }
 }
@@ -80,7 +80,7 @@
     height: 1.25em;
     margin-top: 0;
     margin-left: 0;
-    content: url("/assets/img/icon-search-mod-noc.svg");
+    content: url("../assets/img/icon-search-mod-noc.svg");
     margin-top: 0.5em;
     margin-left: 1.43em; //23.6px;
   }
