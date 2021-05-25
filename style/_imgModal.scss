@@ -48,7 +48,6 @@
 }
 
 button {
-  //   border: 0.06em solid $line-color;
   border-style: none;
   border-radius: 0.37em;
   color: $line-color;
@@ -93,7 +92,7 @@ button {
   right: 10.5%;
   transition: 0.3s;
   background-image: url("../assets/img/close.svg");
-  width: 3.7%;
+  width: 4.7%;
   height: 2.4%;
   background-repeat: no-repeat;
   body.dark-mode & {

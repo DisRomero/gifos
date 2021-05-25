@@ -94,10 +94,14 @@ export const createElemntHover = (gifos, div, slider) => {
   div.appendChild(span);
   slider.appendChild(div);
 
+  const gifosDownsized = gifos.images.downsized;
+
   btnFavorite.addEventListener("click", () => {
-    return addGifoFavorite(btnFavorite, gifos);
+    return addGifoFavorite(btnFavorite, gifos, gifosDownsized);
   }); ////
-  btnDownload.addEventListener("click", () => downloadGifo(gifos));
+  btnDownload.addEventListener("click", () => {
+    return downloadGifo(gifos, gifosDownsized);
+  });
   btnExpand.addEventListener("click", () => {
     return expandGifo(btnFavorite, gifos);
   });

@@ -12,7 +12,7 @@ const addFavoriteGifo = (gifos) => {
   let tagLiResponde = document.createElement("li");
   tagLiResponde.classList.add("div-slider");
   let tagImgResponde = document.createElement("img");
-  tagImgResponde.src = gifos.downsized;
+  tagImgResponde.src = gifos.url;
 
   tagLiResponde.appendChild(tagImgResponde);
   ul.appendChild(tagLiResponde);

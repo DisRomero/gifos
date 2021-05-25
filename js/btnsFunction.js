@@ -1,14 +1,16 @@
-export const addGifoFavorite = (btn, gifos) => {
+export const addGifoFavorite = (btn, gifos, gifosDownsized) => {
   const username = gifos.username;
   const title = gifos.title;
-  const downsized = gifos.images.downsized.url;
+  const url = gifosDownsized.url;
+
+  console.log("console log de btnFuncion", url);
 
   const DataImgFavorite = localStorage.getItem("ImgFavorite");
 
   const newImgFavorite = {
     username,
     title,
-    downsized,
+    url,
   };
 
   if (DataImgFavorite === null) {
@@ -27,10 +29,10 @@ export const addGifoFavorite = (btn, gifos) => {
   btn.disabled = true;
 };
 
-export const downloadGifo = (gifos) => {
+export const downloadGifo = (gifos, gifosDownsized) => {
   const title = gifos.title;
-  const downsized = gifos.images.downsized.url;
-  download(downsized, title);
+  const url = gifosDownsized.url;
+  download(url, title);
 };
 
 async function download(imgValue, imgName) {

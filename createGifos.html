@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crear Gifos</title>
+    <title>Gifos</title>
     <link rel="stylesheet" href="style/style.css" />
 
     <!--fuente Montserrat-->
@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
       rel="stylesheet"
     />
+
     <!--fuente Roboto-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -61,8 +62,112 @@
         </ul>
       </nav>
     </header>
-    <section><h2>Crear gifos</h2></section>
+    <section id="create-gifo" class="create-gifo">
+      <div>
+        <div id="record-img" class="record-img">
+          <img src="./assets/img/camara.svg" alt="" />
+          <img src="./assets/img/element-luz-camara.svg" alt="" />
+        </div>
+        <div id="screen-section" class="screen-section">
+          <div>
+            <div id="first-order" class="first-order"></div>
+            <div id="second-order" class="second-order"></div>
+          </div>
+          <div>
+            <p>aqui podras crear tus propios <span>gifos</span></p>
+            <p>¡Crea tu GIFO en sólo 3 pasos!</p>
+            <p>(sólo necesitas una cámara para grabar un video)</p>
+          </div>
 
-    <script src="js/index.js"></script>
+          <!-- <div id="third-order" class="third-order"></div>
+          <div id="fourth-order" class="fourth-order"></div> -->
+        </div>
+      </div>
+      <div>
+        <ul id="number-create-gifo">
+          <li><button>1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+        </ul>
+        <img src="" alt="" />
+        <div>Line</div>
+      </div>
+      <button id="start-screen">comenzar</button>
+    </section>
+
+    <section class="trending-gifos">
+      <h2 class="text-body">trending <span>gifos</span></h2>
+      <p class="text-trending">
+        Mira los últimos <span>gifos</span> de nuestra comunidad.
+      </p>
+      <div id="container" class="container">
+        <button class="slider-btn btn-left" id="btn-left">
+          <img src="assets/img/button-slider-left.svg" alt="" srcset="" />
+        </button>
+        <div class="slider" id="slider"></div>
+        <button class="slider-btn btn-right" id="btn-right">
+          <img src="assets/img/Button-Slider-right.svg" alt="" srcset="" />
+        </button>
+      </div>
+    </section>
+    <section>
+      <div id="myModal" class="modal">
+        <span id="close" class="close"></span>
+        <div class="container-img-modal">
+          <button class="slider-btn btn-left" id="btn-left">
+            <img src="assets/img/button-slider-left.svg" alt="" srcset="" />
+          </button>
+          <img id="imgModal" class="modal-content" />
+          <button class="slider-btn btn-right" id="btn-right">
+            <img src="assets/img/Button-Slider-right.svg" alt="" srcset="" />
+          </button>
+        </div>
+
+        <div id="text-btn-container" class="text-btn-container">
+          <span class="span-myModal" id="span-myModal"></span>
+          <ul class="container-btns-hover">
+            <li>
+              <button class="btn-favorite" id="btn-favorite">
+                <img
+                  id="img-btn-favortite"
+                  src="assets/img/icon-fav.svg"
+                  alt="Favorite button on modal"
+                />
+              </button>
+            </li>
+            <li>
+              <button class="btn-download" id="btn-download">
+                <img
+                  src="assets/img/icon-download.svg"
+                  alt="Download button on modal"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section class="footer text-trending">
+        <p>Compartir en:</p>
+        <div class="social-network">
+          <a href="https://www.facebook.com/Acamica.org/"
+            ><img class="fb" alt="icon_facebook"
+          /></a>
+          <a href="https://twitter.com/acamica_com?lang=en"
+            ><img class="tw" alt="icon-twitter"
+          /></a>
+          <a href="https://www.instagram.com/acamica/?hl=en"
+            ><img class="ig" alt="icon_instagram"
+          /></a>
+        </div>
+        <p class="copyright text-trending">
+          <span>© gifos 2020</span> all rights reserved.
+        </p>
+      </section>
+      <div class="line-color"></div>
+    </footer>
+
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
