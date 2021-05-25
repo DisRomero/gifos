@@ -41,7 +41,7 @@ nav {
   height: 3.05em;
   //dark mode
   body.dark-mode & {
-    content: url("/assets/img/logo-mobile-modo-noct.svg");
+    content: url("../assets/img/logo-mobile-modo-noct.svg");
   }
 }
 
@@ -88,7 +88,7 @@ nav {
     height: 0.87em;
     //dark mode
     body.dark-mode & {
-      content: url("/assets/img/burger-modo-noct.svg");
+      content: url("../assets/img/burger-modo-noct.svg");
     }
   }
 }
@@ -99,10 +99,10 @@ nav {
 
 #check:checked ~ .burger-btn {
   img {
-    content: url("/assets/img/close.svg");
+    content: url("../assets/img/close.svg");
     //dark mode
     body.dark-mode & {
-      content: url("/assets/img/close-modo-noct.svg");
+      content: url("../assets/img/close-modo-noct.svg");
     }
   }
 }
@@ -158,7 +158,7 @@ nav {
       margin-bottom: 1.25%;
       //dark mode
       body.dark-mode & {
-        content: url("/assets/img/CTA-crear-gifo-hover-modo-noc.svg");
+        content: url("../assets/img/CTA-crear-gifo-hover-modo-noc.svg");
       }
     }
   }
@@ -199,14 +199,14 @@ nav {
   }
 }
 .crear-gifo:hover {
-  content: url("/assets/img/CTA-crear-gifo-hover.svg");
+  content: url("../assets/img/CTA-crear-gifo-hover.svg");
   //dark mode
   body.dark-mode & {
-    content: url("/assets/img/CTA-crear-gifo-hover-modo-noc.svg");
+    content: url("../assets/img/CTA-crear-gifo-hover-modo-noc.svg");
   }
 }
 .crear-gifo:active {
-  content: url("/assets/img/CTA-crear-gifo-active.svg");
+  content: url("../assets/img/CTA-crear-gifo-active.svg");
   //dark mode
   body.dark-mode & {
     content: url("/assets/img/CTA-crear-gifo-active-modo-noc.svg");
