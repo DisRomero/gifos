@@ -45,7 +45,9 @@
             >
           </li>
           <li>
-            <a class="text-menu-conten favorite" href="favorite.html">favoritos</a>
+            <a class="text-menu-conten favorite" href="favorite.html"
+              >favoritos</a
+            >
           </li>
           <li>
             <a class="text-menu-conten" href="myGifo.html">mis GIFOS</a>
@@ -62,18 +64,20 @@
         </ul>
       </nav>
     </header>
-    <section id="favorite-section" class="favorite-section">
-      
-      <img class="favorite-icon" alt="icon_facebook" src="assets/img/icon-favoritos.svg"/>
+    <section id="favorite-section" class="tittle-section">
+      <img class="favorite-icon" src="assets/img/icon-favoritos.svg" />
       <h2 class="text-body">favoritos</h2>
-
       <div id="fav-section-without-content">
-        <img alt="icon_fav_without_content" src="assets/img/icon-fav-sin-contenido.svg">
-        <p class="text-body">"¡Guarda tu primer GIFO en Favoritos </p>
-        <p class="text-body">  para que se muestre aquí!"</p>
+        <img
+          alt="icon_fav_without_content"
+          src="assets/img/icon-fav-sin-contenido.svg"
+        />
+        <p class="text-body">"¡Guarda tu primer GIFO en Favoritos</p>
+        <p class="text-body">para que se muestre aquí!"</p>
       </div>
-
-      <div id="fav-section-with-content"></div>
+      <div id="fav-section-with-content">
+        <ul id="ul-favorire-gifos"></ul>
+      </div>
     </section>
 
     <section class="trending-gifos">
@@ -98,29 +102,34 @@
           <button class="slider-btn btn-left" id="btn-left">
             <img src="assets/img/button-slider-left.svg" alt="" srcset="" />
           </button>
-          <img id="imgModal" class="modal-content">
+          <img id="imgModal" class="modal-content" />
           <button class="slider-btn btn-right" id="btn-right">
             <img src="assets/img/Button-Slider-right.svg" alt="" srcset="" />
           </button>
-
         </div>
-        
+
         <div id="text-btn-container" class="text-btn-container">
           <span class="span-myModal" id="span-myModal"></span>
           <ul class="container-btns-hover">
             <li>
               <button class="btn-favorite" id="btn-favorite">
-                <img id="img-btn-favortite" src="assets/img/icon-fav.svg" alt="Favorite button on modal">
+                <img
+                  id="img-btn-favortite"
+                  src="assets/img/icon-fav.svg"
+                  alt="Favorite button on modal"
+                />
               </button>
             </li>
             <li>
               <button class="btn-download" id="btn-download">
-                <img src="assets/img/icon-download.svg" alt="Download button on modal">
+                <img
+                  src="assets/img/icon-download.svg"
+                  alt="Download button on modal"
+                />
               </button>
             </li>
           </ul>
         </div>
-        
       </div>
     </section>
     <footer>
@@ -144,7 +153,6 @@
       <div class="line-color"></div>
     </footer>
 
-    
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

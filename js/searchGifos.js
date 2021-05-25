@@ -9,7 +9,7 @@ const divResponde = document.getElementById("search-gifos-responde");
 
 import { createElemntHover } from "./trendingGifos.js";
 
-if(document.getElementById("btn-form-search")){
+if (document.getElementById("btn-form-search")) {
   btnSearch.addEventListener("click", (event) => {
     event.preventDefault();
     getValues();
@@ -17,8 +17,6 @@ if(document.getElementById("btn-form-search")){
     suggestion.style.display = "none";
   });
 }
-
-
 
 function getValues() {
   inputSearch = document.getElementById("input-form-search").value;
@@ -39,7 +37,7 @@ const addGifo = (gifos) => {
   createElemntHover(gifos, tagLiResponde, listResponde);
 };
 
-function respondeWithoutGifos() {
+function respondeWithoutGifos(divResponde) {
   divResponde.innerHTML = "";
   const divLine = document.createElement("div");
   divLine.classList.add("line");
@@ -144,17 +142,17 @@ const searchGifos = async (searchText) => {
   }
 };
 
-if(document.getElementById("input-form-search")){
+if (document.getElementById("input-form-search")) {
   search.addEventListener("keyup", (e) => {
     searchGifos(e.target.value);
-  
+
     if (e.target.value === "") {
       suggestion.style.display = "none";
       suggestion.value = "";
     } else {
       suggestion.style.display = "block";
     }
-  
+
     if (e.key === "Enter") {
       suggestion.style.display = "none";
       getValues();
@@ -162,5 +160,3 @@ if(document.getElementById("input-form-search")){
     }
   });
 }
-
-

@@ -2,7 +2,6 @@ import { addGifoFavorite } from "./btnsFunction.js";
 import { downloadGifo } from "./btnsFunction.js";
 import { expandGifo } from "./btnsFunction.js";
 
-
 const api_key = "I9YUl0qQ7GUVk9LXsawA8eFHyjZC7HRP";
 const api_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=6`;
 const slider = document.getElementById("slider");
@@ -37,7 +36,7 @@ export function getImages() {
 const createImage = (gifos) => {
   const div = document.createElement("div");
   const img = document.createElement("img");
-  
+
   div.classList.add("div-slider");
   img.classList.add("slider-image");
   let urlStirng = gifos.images.downsized.url;
@@ -46,7 +45,9 @@ const createImage = (gifos) => {
   div.appendChild(img);
   slider.appendChild(div);
   createElemntHover(gifos, div, slider);
-  img.addEventListener('touchstart', () => { return expandGifo(div, gifos)});
+  img.addEventListener("touchstart", () => {
+    return expandGifo(div, gifos);
+  });
 };
 
 export const createElemntHover = (gifos, div, slider) => {
@@ -91,12 +92,15 @@ export const createElemntHover = (gifos, div, slider) => {
   span.appendChild(userTittle);
   div.appendChild(ulBtns);
   div.appendChild(span);
-
   slider.appendChild(div);
 
-  btnFavorite.addEventListener('click', () => { return addGifoFavorite(btnFavorite, gifos) });////
-  btnDownload.addEventListener('click', () => downloadGifo(gifos));
-  btnExpand.addEventListener('click', () => { return expandGifo(btnFavorite, gifos)});
+  btnFavorite.addEventListener("click", () => {
+    return addGifoFavorite(btnFavorite, gifos);
+  }); ////
+  btnDownload.addEventListener("click", () => downloadGifo(gifos));
+  btnExpand.addEventListener("click", () => {
+    return expandGifo(btnFavorite, gifos);
+  });
 };
 
 const nextImages = () => {
