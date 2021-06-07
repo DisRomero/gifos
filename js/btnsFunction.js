@@ -2,9 +2,6 @@ export const addGifoFavorite = (btn, gifos, gifosDownsized) => {
   const username = gifos.username;
   const title = gifos.title;
   const url = gifosDownsized.url;
-
-  console.log("console log de btnFuncion", url);
-
   const DataImgFavorite = localStorage.getItem("ImgFavorite");
 
   const newImgFavorite = {

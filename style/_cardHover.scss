@@ -1,11 +1,11 @@
 .div-slider {
-  width: 15.18em; //243px;
-  height: 11.68em; //187px;
-  margin-right: 1.37em; //22px;
+  width: 15.18em;
+  height: 11.68em;
+  margin-right: 1.37em;
 
   .slider-image {
-    width: 15.18em; //243px;
-    height: 11.68em; //187px;
+    width: 15.18em;
+    height: 11.68em;
   }
   ul,
   .container-btns-hover,
@@ -24,21 +24,20 @@
     .container-btns-hover {
       display: block;
       li {
-        transform: translate(7.5em, -11.5em); //7.5em, -11.25em (120px, -180px);
+        transform: translate(7.5em, -11.5em);
         display: inline-block;
-
         .btn-favorite {
           &:active {
             opacity: 1;
             img {
               content: url("../assets/img/icon-fav-active.svg");
-              margin: 0.3em; //0.41em
+              margin: 0.3em;
             }
           }
         }
         .active {
           img {
-            width: 1.6em; //2em; //32px;
+            width: 1.6em;
             height: 1.5em;
             content: url("../assets/img/icon-fav-active.svg");
             margin: 0.41em;

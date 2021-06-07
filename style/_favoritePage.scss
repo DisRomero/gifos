@@ -66,7 +66,12 @@
             width: 1.2em;
             height: 1.2em;
             margin-right: 0.31em;
-
+            .btn-fav {
+              display: disabled;
+              img {
+                content: url("../assets/img/icon-fav-active.svg");
+              }
+            }
             button {
               width: 1.4em;
               height: 1.4em;
