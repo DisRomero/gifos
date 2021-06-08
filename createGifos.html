@@ -69,42 +69,48 @@
           <img src="./assets/img/element-luz-camara.svg" alt="" />
         </div>
         <div id="screen-section" class="screen-section">
-          <video src="." id="createGifoTag"></video>
-          <div>
+          
+          <div class="borders top">
             <div id="first-order" class="first-order"></div>
             <div id="second-order" class="second-order"></div>
           </div>
-          <div>
-            <p>aqui podras crear tus propios <span>gifos</span></p>
-            <p>¡Crea tu GIFO en sólo 3 pasos!</p>
-            <p>(sólo necesitas una cámara para grabar un video)</p>
-            
+          <div id="div-video" class="div-video">
+            <video src="." id="createGifoTag"></video>
+          </div>
+          <div id="div-text" class="div-text">
+            <p class="text-body">Aquí podrás crear tus propios <span class="uppercase-search-gifos">gifos</span></p>
+            <p class="text-trending">¡Crea tu GIFO en sólo 3 pasos!</p>
+            <p class="text-trending">(sólo necesitas una cámara para grabar un video)</p>
           </div>
 
-          <div>
+          <div class="borders bottom">
             <div id="third-order" class="third-order"></div>
             <div id="fourth-order" class="fourth-order"></div>
           </div>
 
-          
         </div>
-      </div>
-      <div>
+      <div></div>
+      <div></div>
+      <div class="number-section">
+
         <ul id="number-create-gifo">
           <li><button>1</button></li>
           <li><button>2</button></li>
           <li><button>3</button></li>
         </ul>
+
         <p id="video-time" class="video-time">tiempo del video</p>
         <button id="repeat-screen" class="repeat-screen" style="display: none;">repetir captura</button>
-        <img src="" alt="" />
         <div>Line</div>
+
+        <button id="start-screen">comenzar</button>
+        <button id="record-screen" style="display: none;">grabar</button>
+        <button id="finish-record-screen" style="display: none;">finalizar</button>
+        <button id="upload-gifo" style="display: none;">subir gifo</button>
+
       </div>
-      <button id="start-screen">comenzar</button>
-      <button id="record-screen" style="display: none;">grabar</button>
-      <button id="finish-record-screen" style="display: none;">finalizar</button>
-      <button id="upload-gifo" style="display: none;">subir gifo</button>
-      
+
+    </div>
     </section>
     <footer>
       <section class="footer text-trending">

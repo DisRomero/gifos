@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="76px" height="128px" viewBox="0 0 76 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>element-luz-camara</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="60.1486155%" y1="50%" x2="4.87561291%" y2="56.8445227%" id="linearGradient-1">
-            <stop stop-color="#88F3E2" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#50E3C2" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="GIFOS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="00-UI-Kit" transform="translate(-764.000000, -2162.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
-            <polygon id="element-luz-camara" points="764 2204.17295 855 2147 855 2298 764 2245.11161"></polygon>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="123pt" height="207pt" viewBox="0 0 123 207" version="1.1">
+<defs>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="0.601486" y1="0.5" x2="0.0487561" y2="0.568445" gradientTransform="matrix(147.277344,0,0,244.195312,0,-24.257813)">
+<stop offset="0" style="stop-color:rgb(53.333333%,95.294118%,88.627451%);stop-opacity:0;"/>
+<stop offset="1" style="stop-color:rgb(31.372549%,89.019608%,76.078431%);stop-opacity:1;"/>
+</linearGradient>
+</defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 0 68.203125 L 147.277344 -24.257812 L 147.277344 219.9375 L 0 134.40625 Z M 0 68.203125 "/>
+</g>
 </svg>

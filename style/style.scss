@@ -56,3 +56,8 @@ $font-roboto: "Roboto", sans-serif;
   text-align: center;
   line-height: 1.43em; //23px;
 }
+
+.uppercase-search-gifos {
+  text-transform: uppercase;
+  color: $link-hover-color;
+}

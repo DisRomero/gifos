@@ -52,7 +52,7 @@ async function accessCamera (){
         const lightCamera = document.getElementById('record-img').children[1];
         video.style.zIndex = "100";
         video.style.display = 'block'
-        lightCamera.style.height = '48%';
+        // lightCamera.style.height = '48%';
         video.srcObject = stream;
         video.onloadedmetadata = async function(e) {
         video.play();

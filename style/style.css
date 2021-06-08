@@ -288,11 +288,6 @@ body.dark-mode .search-gifos .title-search-gifos {
   color: #ffffff;
 }
 
-.search-gifos .title-search-gifos .uppercase-search-gifos {
-  text-transform: uppercase;
-  color: #5ed7c6;
-}
-
 .search-gifos img {
   width: 17.06em;
   height: 8.12em;
@@ -1060,27 +1055,33 @@ body.dark-mode .search-gifos-responde button:hover {
 
 @media screen and (min-width: 768px) {
   .create-gifo .grid-container {
-    margin-top: 10%;
+    margin-top: 0.5%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 25% 12% 42% 25%;
-        grid-template-columns: 25% 12% 42% 25%;
-    -ms-grid-rows: 50% 50%;
-        grid-template-rows: 50% 50%;
+    -ms-grid-columns: 25% 55% 25%;
+        grid-template-columns: 25% 55% 25%;
+    -ms-grid-rows: 75% 100%;
+        grid-template-rows: 75% 100%;
     gap: 0px 0px;
-        grid-template-areas: "record-img record-img screen-section ." ". . numeros peluca";
+        grid-template-areas: "record-img screen-section ." ". number-section peluca";
   }
   .create-gifo .record-img {
     margin-left: 20%;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: record-img;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
   .create-gifo .record-img :nth-child(2) {
-    height: 187%;
+    height: 30%;
   }
   .create-gifo .screen-section {
+    border: 0.1em solid #572ee5;
+    margin-left: 10%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -1090,23 +1091,80 @@ body.dark-mode .search-gifos-responde button:hover {
     gap: 0px 0px;
         grid-template-areas: "." "." ".";
     -ms-grid-row: 1;
-    -ms-grid-column: 3;
+    -ms-grid-column: 2;
     grid-area: screen-section;
   }
-  .create-gifo .screen-section video {
+  .create-gifo .screen-section .borders {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .create-gifo .screen-section .top {
+    margin-top: 5%;
+  }
+  .create-gifo .screen-section .bottom {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 5%;
+  }
+  .create-gifo .screen-section div .first-order {
+    width: 1.68em;
+    height: 1.56em;
+    border-top: solid 0.1em #50e3c2;
+    border-left: solid 0.1em #50e3c2;
+  }
+  .create-gifo .screen-section div .second-order {
+    width: 1.68em;
+    height: 1.56em;
+    border-top: solid 0.1em #50e3c2;
+    border-right: solid 0.1em #50e3c2;
+  }
+  .create-gifo .screen-section .div-video {
     display: none;
+  }
+  .create-gifo .screen-section .div-video video {
     height: 100%;
     width: 100%;
     margin-top: -10%;
   }
-  .create-gifo .numeros {
+  .create-gifo .screen-section .div-text .text-trending {
+    margin-top: 0.1%;
+  }
+  .create-gifo .screen-section div .third-order {
+    width: 1.68em;
+    height: 1.56em;
+    border-bottom: solid 0.1em #50e3c2;
+    border-left: solid 0.1em #50e3c2;
+  }
+  .create-gifo .screen-section div .fourth-order {
+    width: 1.68em;
+    height: 1.56em;
+    border-bottom: solid 0.1em #50e3c2;
+    border-right: solid 0.1em #50e3c2;
+  }
+  .create-gifo .number-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 33% 33%;
+        grid-template-columns: 33% 33% 33%;
+    -ms-grid-rows: 33% 33% 33%;
+        grid-template-rows: 33% 33% 33%;
+    gap: 0px 0px;
+        grid-template-areas: ". one cinta" "line line line" ". botones .";
     -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: numeros;
+    -ms-grid-column: 2;
+    grid-area: number-section;
+    height: 40%;
   }
   .create-gifo .peluca {
     -ms-grid-row: 2;
-    -ms-grid-column: 4;
+    -ms-grid-column: 3;
     grid-area: peluca;
   }
 }
@@ -1738,5 +1796,10 @@ footer .line-color {
   color: #000000;
   text-align: center;
   line-height: 1.43em;
+}
+
+.uppercase-search-gifos {
+  text-transform: uppercase;
+  color: #5ed7c6;
 }
 /*# sourceMappingURL=style.css.map */
