@@ -135,7 +135,9 @@ const previousImages = () => {
   }
 };
 
-btnRight.addEventListener("click", nextImages);
-btnLeft.addEventListener("click", previousImages);
+  if(document.getElementById("btn-left") || document.getElementById("btn-right") ){
+    btnRight.addEventListener("click", nextImages);
+    btnLeft.addEventListener("click", previousImages);
+  }
 
 getImages();

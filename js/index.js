@@ -5,3 +5,4 @@ import { getImages } from "./trendingGifos.js";
 import * as btnsFunction from "./btnsFunction.js";
 import * as imgSaved from "./favoritePage.js";
 import * as myGifo from "./myGifo.js";
+import * as createGifo from "./createGifo.js";

@@ -1058,47 +1058,56 @@ body.dark-mode .search-gifos-responde button:hover {
   color: #50e3c2;
 }
 
-.create-gifo {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
-  .create-gifo {
+  .create-gifo .grid-container {
+    margin-top: 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 12% 42% 25%;
+        grid-template-columns: 25% 12% 42% 25%;
+    -ms-grid-rows: 50% 50%;
+        grid-template-rows: 50% 50%;
+    gap: 0px 0px;
+        grid-template-areas: "record-img record-img screen-section ." ". . numeros peluca";
+  }
+  .create-gifo .record-img {
+    margin-left: 20%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: record-img;
+  }
+  .create-gifo .record-img :nth-child(2) {
+    height: 187%;
+  }
+  .create-gifo .screen-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+        grid-template-areas: "." "." ".";
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: screen-section;
+  }
+  .create-gifo .screen-section video {
     display: none;
+    height: 100%;
+    width: 100%;
+    margin-top: -10%;
   }
-  .create-gifo div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .create-gifo .numeros {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: numeros;
   }
-  .record-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .screen-section {
-    width: 47.8%;
-    height: 49.5%;
-    border: 1px solid #572ee5;
-    padding-top: 5%;
-    display: block;
-  }
-  .screen-section .first-order {
-    width: 1.68em;
-    height: 1.56em;
-    border-top: solid 1px #50e3c2;
-    border-left: solid 1px #50e3c2;
-    margin-left: 5%;
-  }
-  .screen-section .second-order {
-    width: 1.68em;
-    height: 1.56em;
-    border-top: solid 1px #50e3c2;
-    border-right: solid 1px #50e3c2;
-    margin-right: 5%;
-  }
-  .screen-section :nth-child(2) {
-    display: block;
+  .create-gifo .peluca {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: peluca;
   }
 }
 

@@ -1,45 +1,77 @@
-.create-gifo {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .create-gifo {
-    display: none;
-    div {
-      display: flex;
+    .grid-container {
+      margin-top: 10%;
+      display: grid;
+      grid-template-columns: 25% 12% 42% 25%;
+      grid-template-rows: 50% 50%;
+      gap: 0px 0px;
+      grid-template-areas:
+        "record-img record-img screen-section ."
+        ". . numeros peluca";
+    }
+    .record-img {
+      margin-left: 20%;
+      grid-area: record-img;
+      :nth-child(2) {
+        height: 187%;
+      }
+    }
+    .screen-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "."
+        "."
+        ".";
+      grid-area: screen-section;
+      video {
+        display: none;
+        height: 100%;
+        width: 100%;
+        margin-top: -10%;
+      }
+    }
+    .numeros {
+      grid-area: numeros;
+    }
+    .peluca {
+      grid-area: peluca;
     }
   }
 
-  .record-img {
-    display: flex;
-  }
+  // .record-img {
+  //   display: flex;
+  // }
 
-  .screen-section {
-    width: 47.8%;
-    height: 49.5%;
-    border: 1px solid $line-color;
-    padding-top: 5%;
-    display: block;
+  // .screen-section {
+  //   width: 47.8%;
+  //   height: 49.5%;
+  //   border: 1px solid $line-color;
+  //   padding-top: 5%;
+  //   display: block;
 
-    .first-order {
-      width: 1.68em;
-      height: 1.56em;
-      border-top: solid 1px $txt-fail-responde;
-      border-left: solid 1px $txt-fail-responde;
-      margin-left: 5%;
-    }
+  //   .first-order {
+  //     width: 1.68em;
+  //     height: 1.56em;
+  //     border-top: solid 1px $txt-fail-responde;
+  //     border-left: solid 1px $txt-fail-responde;
+  //     margin-left: 5%;
+  //   }
 
-    .second-order {
-      width: 1.68em;
-      height: 1.56em;
-      border-top: solid 1px $txt-fail-responde;
-      border-right: solid 1px $txt-fail-responde;
-      margin-right: 5%;
-    }
-    :nth-child(2) {
-      display: block;
-    }
-  }
+  //   .second-order {
+  //     width: 1.68em;
+  //     height: 1.56em;
+  //     border-top: solid 1px $txt-fail-responde;
+  //     border-right: solid 1px $txt-fail-responde;
+  //     margin-right: 5%;
+  //   }
+  //   :nth-child(2) {
+  //     display: block;
+  //   }
+  // }
 }
 
 @media screen and (min-width: 1023px) {

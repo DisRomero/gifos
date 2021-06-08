@@ -27,12 +27,12 @@
       <nav>
         <div class="logo-container">
           <a href="index.html">
-            <img class="logo" src="./assets/img/logo-mobile.svg" alt="logo" />
+            <img class="logo" src="assets/img/logo-mobile.svg" alt="logo" />
           </a>
         </div>
         <input type="checkbox" id="check" />
         <label for="check" class="burger-btn">
-          <img src="./assets/img/burger.svg" alt="menu" />
+          <img src="assets/img/burger.svg" alt="menu" />
         </label>
         <ul class="menu-conten">
           <li>
@@ -54,7 +54,7 @@
             <a href="createGifos.html">
               <img
                 class="crear-gifo"
-                src="./assets/img/button-crear-gifo.svg"
+                src="assets/img/CTA-crear-gifo-active.svg"
                 alt="crear-gifo"
               />
             </a>
@@ -63,12 +63,13 @@
       </nav>
     </header>
     <section id="create-gifo" class="create-gifo">
-      <div>
+      <div class="grid-container">
         <div id="record-img" class="record-img">
           <img src="./assets/img/camara.svg" alt="" />
           <img src="./assets/img/element-luz-camara.svg" alt="" />
         </div>
         <div id="screen-section" class="screen-section">
+          <video src="." id="createGifoTag"></video>
           <div>
             <div id="first-order" class="first-order"></div>
             <div id="second-order" class="second-order"></div>
@@ -77,10 +78,15 @@
             <p>aqui podras crear tus propios <span>gifos</span></p>
             <p>¡Crea tu GIFO en sólo 3 pasos!</p>
             <p>(sólo necesitas una cámara para grabar un video)</p>
+            
           </div>
 
-          <!-- <div id="third-order" class="third-order"></div>
-          <div id="fourth-order" class="fourth-order"></div> -->
+          <div>
+            <div id="third-order" class="third-order"></div>
+            <div id="fourth-order" class="fourth-order"></div>
+          </div>
+
+          
         </div>
       </div>
       <div>
@@ -89,63 +95,16 @@
           <li><button>2</button></li>
           <li><button>3</button></li>
         </ul>
+        <p id="video-time" class="video-time">tiempo del video</p>
+        <button id="repeat-screen" class="repeat-screen" style="display: none;">repetir captura</button>
         <img src="" alt="" />
         <div>Line</div>
       </div>
       <button id="start-screen">comenzar</button>
-    </section>
-
-    <section class="trending-gifos">
-      <h2 class="text-body">trending <span>gifos</span></h2>
-      <p class="text-trending">
-        Mira los últimos <span>gifos</span> de nuestra comunidad.
-      </p>
-      <div id="container" class="container">
-        <button class="slider-btn btn-left" id="btn-left">
-          <img src="assets/img/button-slider-left.svg" alt="" srcset="" />
-        </button>
-        <div class="slider" id="slider"></div>
-        <button class="slider-btn btn-right" id="btn-right">
-          <img src="assets/img/Button-Slider-right.svg" alt="" srcset="" />
-        </button>
-      </div>
-    </section>
-    <section>
-      <div id="myModal" class="modal">
-        <span id="close" class="close"></span>
-        <div class="container-img-modal">
-          <button class="slider-btn btn-left" id="btn-left">
-            <img src="assets/img/button-slider-left.svg" alt="" srcset="" />
-          </button>
-          <img id="imgModal" class="modal-content" />
-          <button class="slider-btn btn-right" id="btn-right">
-            <img src="assets/img/Button-Slider-right.svg" alt="" srcset="" />
-          </button>
-        </div>
-
-        <div id="text-btn-container" class="text-btn-container">
-          <span class="span-myModal" id="span-myModal"></span>
-          <ul class="container-btns-hover">
-            <li>
-              <button class="btn-favorite" id="btn-favorite">
-                <img
-                  id="img-btn-favortite"
-                  src="assets/img/icon-fav.svg"
-                  alt="Favorite button on modal"
-                />
-              </button>
-            </li>
-            <li>
-              <button class="btn-download" id="btn-download">
-                <img
-                  src="assets/img/icon-download.svg"
-                  alt="Download button on modal"
-                />
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <button id="record-screen" style="display: none;">grabar</button>
+      <button id="finish-record-screen" style="display: none;">finalizar</button>
+      <button id="upload-gifo" style="display: none;">subir gifo</button>
+      
     </section>
     <footer>
       <section class="footer text-trending">
@@ -169,5 +128,9 @@
     </footer>
 
     <script type="module" src="./js/index.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+
+   
   </body>
 </html>
