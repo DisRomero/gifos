@@ -1,113 +1,184 @@
+.create-gif {
+  display: none;
+}
 @media screen and (min-width: 768px) {
-  .create-gifo {
-    .grid-container {
-      margin-top: 0.5%;
-      display: grid;
-      grid-template-columns: 25% 55% 25%;
-      grid-template-rows: 75% 100%;
-      gap: 0px 0px;
-      grid-template-areas:
-        "record-img screen-section ."
-        ". number-section peluca";
-    }
-    .record-img {
-      margin-left: 20%;
-      display: flex;
-      align-items: center;
-      align-content: center;
-      :nth-child(2) {
-        height: 30%;
-      }
-    }
-    .screen-section {
-      border: 0.1em solid $line-color;
-      margin-left: 10%;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "."
-        "."
-        ".";
-      grid-area: screen-section;
-      .borders {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5%;
-        margin-left: 5%;
-      }
-
-      .top {
-        margin-top: 5%;
-      }
-
-      .bottom {
-        align-items: flex-end;
-        margin-bottom: 5%;
-      }
-      div {
-        .first-order {
-          width: 1.68em;
-          height: 1.56em;
-          border-top: solid 0.1em $txt-fail-responde;
-          border-left: solid 0.1em $txt-fail-responde;
-        }
-
-        .second-order {
-          width: 1.68em;
-          height: 1.56em;
-          border-top: solid 0.1em $txt-fail-responde;
-          border-right: solid 0.1em $txt-fail-responde;
-        }
-      }
-
-      .div-video {
-        display: none;
-        video {
-          height: 100%;
-          width: 100%;
-          margin-top: -10%;
-        }
-      }
-
-      .div-text {
-        .text-trending {
-          margin-top: 0.1%;
-        }
-      }
-      div {
-        .third-order {
-          width: 1.68em;
-          height: 1.56em;
-          border-bottom: solid 0.1em $txt-fail-responde;
-          border-left: solid 0.1em $txt-fail-responde;
-        }
-
-        .fourth-order {
-          width: 1.68em;
-          height: 1.56em;
-          border-bottom: solid 0.1em $txt-fail-responde;
-          border-right: solid 0.1em $txt-fail-responde;
-        }
+  .create-gif {
+    margin-top: 0.5%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "camera-div video-div ."
+      ". tools-recording film-div";
+  }
+  .camera-div {
+    margin-top: 14%;
+    margin-left: 11%;
+    grid-area: camera-div;
+    .camera {
+      body.dark-mode & {
+        content: url("../assets/img/camara-modo-noc.svg");
       }
     }
 
-    .number-section {
-      display: grid;
-      grid-template-columns: 33% 33% 33%;
-      grid-template-rows: 33% 33% 33%;
-      gap: 0px 0px;
-      grid-template-areas:
-        ". one cinta"
-        "line line line"
-        ". botones .";
-      grid-area: number-section;
-      height: 40%;
+    .camera-light {
+      width: 38%;
+      height: 94%;
+    }
+  }
+  .video-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "first-border . second-border"
+      "info-video info-video info-video"
+      "third-border . fourth-border";
+    grid-area: video-div;
+    border: 0.063em solid $line-color;
+    padding: 1.25em;
+    width: 19.2em;
+  }
+  .size {
+    width: 30%;
+    height: 50%;
+  }
+
+  .first-border {
+    grid-area: first-border;
+    border-top: solid 0.1em $txt-fail-responde;
+    border-left: solid 0.1em $txt-fail-responde;
+  }
+  .second-border {
+    grid-area: second-border;
+    margin-left: 70%;
+    border-top: solid 0.1em $txt-fail-responde;
+    border-right: solid 0.1em $txt-fail-responde;
+  }
+  .info-video {
+    grid-area: info-video;
+    background-color: coral;
+    height: 280%;
+    width: 97%;
+    margin-top: -18%;
+    margin-left: 1.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text-info-video {
+      display: block;
+      padding: 4%;
+
+      p {
+        font-size: 1em;
+        line-height: 1em;
+      }
+    }
+    .text-camera-access {
+      display: none;
+      padding: 4%;
+      p {
+        font-size: 1em;
+        line-height: 1em;
+      }
+    }
+    .video-div {
+      display: none;
+    }
+  }
+  .third-border {
+    grid-area: third-border;
+    margin-top: 30%;
+    border-bottom: solid 0.1em $txt-fail-responde;
+    border-left: solid 0.1em $txt-fail-responde;
+  }
+  .fourth-border {
+    grid-area: fourth-border;
+    margin-top: 30%;
+    margin-left: 70%;
+    border-bottom: solid 0.1em $txt-fail-responde;
+    border-right: solid 0.1em $txt-fail-responde;
+  }
+
+  .tools-recording {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". steps timer"
+      "lines lines lines"
+      ". buttons-recording .";
+    grid-area: tools-recording;
+
+    .timer {
+      grid-area: timer;
+      font-size: 0.8em;
+      margin: auto;
+      text-transform: uppercase;
+    }
+    #text-Rec {
+      text-decoration: underline;
+      text-decoration-color: $link-hover-color;
+      text-decoration-thickness: 0.12em;
     }
 
-    .peluca {
-      grid-area: peluca;
+    .step,
+    .button {
+      body.dark-mode & {
+        background-color: $body-dark-color;
+        color: $white-color;
+        border-color: $black-color;
+      }
+    }
+  }
+
+  .steps {
+    grid-area: steps;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .active {
+      background-color: $line-color;
+      color: $white-color;
+    }
+  }
+
+  .step {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: solid 0.1em $line-color;
+  }
+
+  .lines {
+    grid-area: lines;
+    width: 120%;
+    margin-left: -10%;
+  }
+
+  .buttons-recording {
+    grid-area: buttons-recording;
+    margin-top: -50%;
+    .button {
+      text-transform: uppercase;
+      border: solid 0.1em $line-color;
+      border-radius: 1.3em;
+      width: 100%;
+      font-size: 0.8em;
+    }
+  }
+
+  .film-div {
+    grid-area: film-div;
+    margin-left: 20%;
+    .film {
+      body.dark-mode & {
+        content: url("../assets/img/pelicula-modo-noc.svg");
+      }
     }
   }
 }

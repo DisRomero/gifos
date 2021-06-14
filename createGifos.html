@@ -61,56 +61,46 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <section id="create-gifo" class="create-gifo">
-      <div class="grid-container">
-        <div id="record-img" class="record-img">
-          <img src="./assets/img/camara.svg" alt="" />
-          <img src="./assets/img/element-luz-camara.svg" alt="" />
-        </div>
-        <div id="screen-section" class="screen-section">
-          
-          <div class="borders top">
-            <div id="first-order" class="first-order"></div>
-            <div id="second-order" class="second-order"></div>
-          </div>
-          <div id="div-video" class="div-video">
-            <video src="." id="createGifoTag"></video>
-          </div>
-          <div id="div-text" class="div-text">
+    </header> 
+    <section id="create-gif" class="create-gif">
+      <div id="camera-div" class="camera-div">
+        <img src="./assets/img/camara.svg" alt="camara-de-pelicula" class="camera" />
+        <img src="./assets/img/element-luz-camara.svg" alt="luz-de-camara" class="camera-light" />
+      </div>
+      <div id="video-div" class="video-div">
+        <div id="first-border" class="first-border size"></div>
+        <div id="second-border" class="second-border size"></div>
+        <div id="info-video" class="info-video">
+          <div id="text-info-video" class="text-info-video">
             <p class="text-body">Aquí podrás crear tus propios <span class="uppercase-search-gifos">gifos</span></p>
-            <p class="text-trending">¡Crea tu GIFO en sólo 3 pasos!</p>
-            <p class="text-trending">(sólo necesitas una cámara para grabar un video)</p>
+            <p class="text-trending">¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
           </div>
+          <div id="text-camera-access" class="text-camera-access">
+            <p class="text-body">¿Nos das acceso a tu cámara?</p>
+            <p class="text-trending">El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
 
-          <div class="borders bottom">
-            <div id="third-order" class="third-order"></div>
-            <div id="fourth-order" class="fourth-order"></div>
           </div>
-
+          <div id="video-div" class="video-div"></div>
+          
         </div>
-      <div></div>
-      <div></div>
-      <div class="number-section">
-
-        <ul id="number-create-gifo">
-          <li><button>1</button></li>
-          <li><button>2</button></li>
-          <li><button>3</button></li>
-        </ul>
-
-        <p id="video-time" class="video-time">tiempo del video</p>
-        <button id="repeat-screen" class="repeat-screen" style="display: none;">repetir captura</button>
-        <div>Line</div>
-
-        <button id="start-screen">comenzar</button>
-        <button id="record-screen" style="display: none;">grabar</button>
-        <button id="finish-record-screen" style="display: none;">finalizar</button>
-        <button id="upload-gifo" style="display: none;">subir gifo</button>
-
+        <div id="third-border" class="third-border size"></div>
+        <div id="fourth-border" class="fourth-border size"></div>
+      </div>
+      <div id="tools-recording" class="tools-recording">
+        <div id="steps" class="steps">
+          <button id="first-step" class="first step">1</button>
+          <button id="second-step" class="second step">2</button>
+          <button id="third-step" class="third step">3</button>
+        </div>
+        <div class="line-color lines"></div>
+        <div id="buttons-recording" class="buttons-recording">
+          <button id="star-button" class="button text-body">comenzar</button>
+        </div>   
+      </div>
+      <div id="film-div" class="film-div">
+        <img src="./assets/img/pelicula.svg" alt="cinta-de-pelicula" class="film">
       </div>
 
-    </div>
     </section>
     <footer>
       <section class="footer text-trending">
