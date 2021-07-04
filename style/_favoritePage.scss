@@ -13,6 +13,11 @@
   .text-body {
     width: 38.1%;
     text-transform: capitalize;
+    body.dark-mode & {
+      background-color: $body-dark-color;
+      color: $white-color;
+      border-color: $black-color;
+    }
   }
 
   div {
@@ -62,7 +67,7 @@
           width: 8.5em;
           height: 7.5em;
           .container-btns-hover li {
-            transform: translate(3.5em, -7.31em); //(60px, -165px);
+            transform: translate(3.5em, -7.31em);
             width: 1.2em;
             height: 1.2em;
             margin-right: 0.31em;
@@ -76,10 +81,18 @@
               width: 1.4em;
               height: 1.4em;
               border-radius: 0.5em;
+
               img {
                 width: 1em;
                 height: 1em;
                 margin: 0.15em;
+              }
+            }
+            .text-body {
+              body.dark-mode & {
+                background-color: $body-dark-color;
+                color: $white-color;
+                border-color: $black-color;
               }
             }
           }
@@ -128,6 +141,13 @@
         color: $link-active-color;
       }
     }
+    li {
+      .crear-gifo {
+        body.dark-mode & {
+          content: url("../assets/img/CTA-crar-gifo-modo-noc.svg");
+        }
+      }
+    }
   }
 
   .tittle-section {
@@ -166,6 +186,7 @@
                 width: 1.2em;
                 height: 1.2em;
                 border-radius: 0.4em;
+                //
                 img {
                   margin: 0.1em 0 0 0;
                   width: 0.9em;

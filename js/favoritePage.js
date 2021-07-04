@@ -1,6 +1,5 @@
 import { addGifoFavorite } from "./btnsFunction.js";
 import { downloadGifo } from "./btnsFunction.js";
-//import { expandGifo } from "./btnsFunction.js";
 
 const divWithoutContent = document.getElementById(
   "fav-section-without-content"
@@ -77,6 +76,7 @@ const createElemntHoverFav = (gifos, div, slider) => {
     return expandGifoFav(btnFavorite, gifos);
   });
 };
+
 const expandGifoFav = (btn, gifos) => {
   const modal = document.getElementById("myModal");
   const modalImg = document.getElementById("imgModal");

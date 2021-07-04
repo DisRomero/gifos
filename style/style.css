@@ -341,6 +341,14 @@ body.dark-mode .form-search img {
   content: url("../assets/img/icon-search-modo-noct.svg");
 }
 
+.form-search .clear-search {
+  display: none;
+}
+
+body.dark-mode .form-search .clear-search img {
+  content: url("../assets/img/close-modo-noct.svg");
+}
+
 .ul-form-search {
   display: none;
   width: 17.5em;
@@ -780,6 +788,12 @@ body.dark-mode .search-gifos-responde button:hover {
   text-transform: capitalize;
 }
 
+body.dark-mode .tittle-section .text-body {
+  background-color: #37383c;
+  color: #ffffff;
+  border-color: #000000;
+}
+
 .tittle-section div {
   display: none;
   -webkit-box-orient: vertical;
@@ -871,6 +885,12 @@ body.dark-mode .search-gifos-responde button:hover {
   margin: 0.15em;
 }
 
+body.dark-mode .tittle-section #fav-section-with-content .favorite-list .div-slider:hover .container-btns-hover li .text-body {
+  background-color: #37383c;
+  color: #ffffff;
+  border-color: #000000;
+}
+
 .tittle-section #fav-section-with-content .favorite-list .div-slider:hover .span-text {
   -webkit-transform: translateY(-8em);
           transform: translateY(-8em);
@@ -913,6 +933,9 @@ body.dark-mode .search-gifos-responde button:hover {
   }
   body.dark-mode .menu-conten .favorite {
     color: #9cafc3;
+  }
+  body.dark-mode .menu-conten li .crear-gifo {
+    content: url("../assets/img/CTA-crar-gifo-modo-noc.svg");
   }
   .tittle-section img {
     width: 3.7%;
@@ -1053,22 +1076,110 @@ body.dark-mode .search-gifos-responde button:hover {
   color: #50e3c2;
 }
 
+#my-gifos-section-with-content {
+  width: 100%;
+}
+
+#my-gifos-section-with-content button {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  width: 50%;
+  text-transform: uppercase;
+  border: solid 0.1em #572ee5;
+  border-radius: 1.3em;
+  height: 2.4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.dark-mode #my-gifos-section-with-content button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.gifos-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 40%;
+      grid-template-columns: 50% 40%;
+  -ms-grid-rows: 8.5em 8.5em;
+      grid-template-rows: 8.5em 8.5em;
+  margin-left: 1em;
+}
+
+.gifos-list .div-slider {
+  width: 8em;
+  height: auto;
+}
+
+.gifos-list .div-slider img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .gifos-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 25% 25% 25% 30%;
+        grid-template-columns: 25% 25% 25% 30%;
+    -ms-grid-rows: 8.5em 8.5em;
+        grid-template-rows: 8.5em 8.5em;
+    margin-left: 1.6%;
+  }
+  .gifos-list .div-slider {
+    margin-left: 10%;
+  }
+  .gifos-list .div-slider img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .gifos-list .div-slider {
+    width: 12em;
+    margin-bottom: 1em;
+  }
+  .gifos-list .div-slider img {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .gifos-list .div-slider {
+    width: 16em;
+  }
+}
+
 .create-gif {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
+  body.dark-mode .menu-conten li .crear-gifo {
+    content: url("../assets/img/CTA-crear-gifo-active-modo-noc.svg");
+  }
   .create-gif {
     margin-top: 0.5%;
     display: -ms-grid;
     display: grid;
-    grid-auto-columns: 1fr;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-        grid-template-areas: "camera-div video-div ." ". tools-recording film-div";
+        grid-template-areas: "camera-div info-video info-video" ". tools-recording film-div";
   }
   .camera-div {
     margin-top: 14%;
@@ -1081,126 +1192,113 @@ body.dark-mode .search-gifos-responde button:hover {
     content: url("../assets/img/camara-modo-noc.svg");
   }
   .camera-div .camera-light {
-    width: 38%;
-    height: 94%;
-  }
-  .video-div {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-        grid-template-areas: "first-border . second-border" "info-video info-video info-video" "third-border . fourth-border";
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: video-div;
-    border: 0.063em solid #572ee5;
-    padding: 1.25em;
-    width: 19.2em;
+    width: 40%;
   }
   .size {
-    width: 30%;
-    height: 50%;
-  }
-  .first-border {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: first-border;
-    border-top: solid 0.1em #50e3c2;
-    border-left: solid 0.1em #50e3c2;
-  }
-  .second-border {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: second-border;
-    margin-left: 70%;
-    border-top: solid 0.1em #50e3c2;
-    border-right: solid 0.1em #50e3c2;
+    width: 20%;
+    height: 20%;
   }
   .info-video {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-area: info-video;
-    background-color: coral;
-    height: 280%;
-    width: 97%;
-    margin-top: -18%;
-    margin-left: 1.5%;
+    width: 21.25em;
+    height: 16.25em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 0.063em solid #572ee5;
+    padding: 0.5em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .info-video .upload-gifo,
+  .info-video .text-info-video {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .info-video .upload-gifo {
+    display: none;
+    background: #572ee5;
+    opacity: 0.6;
+    z-index: 2;
+    margin-left: -100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
   }
   .info-video .text-info-video {
-    display: block;
-    padding: 4%;
+    margin-left: 1%;
+    height: 15.2em;
+    width: 20.2em;
+    background: linear-gradient(to right, #5ed7c6 0.04em, transparent 4px) 0 0, linear-gradient(to right, #5ed7c6 0.04em, transparent 4px) 0 100%, linear-gradient(to left, #5ed7c6 0.04em, transparent 4px) 100% 0, linear-gradient(to left, #5ed7c6 0.04em, transparent 4px) 100% 100%, linear-gradient(to bottom, #5ed7c6 0.04em, transparent 4px) 0 0, linear-gradient(to bottom, #5ed7c6 0.04em, transparent 4px) 100% 0, linear-gradient(to top, #5ed7c6 0.04em, transparent 4px) 0 100%, linear-gradient(to top, #5ed7c6 0.04em, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 1.25em 1.25em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .info-video .text-info-video p {
-    font-size: 1em;
-    line-height: 1em;
+    font-size: 1.4em;
+    line-height: 1.5em;
   }
-  .info-video .text-camera-access {
-    display: none;
-    padding: 4%;
-  }
-  .info-video .text-camera-access p {
-    font-size: 1em;
-    line-height: 1em;
-  }
-  .info-video .video-div {
-    display: none;
-  }
-  .third-border {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: third-border;
-    margin-top: 30%;
-    border-bottom: solid 0.1em #50e3c2;
-    border-left: solid 0.1em #50e3c2;
-  }
-  .fourth-border {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    grid-area: fourth-border;
-    margin-top: 30%;
-    margin-left: 70%;
-    border-bottom: solid 0.1em #50e3c2;
-    border-right: solid 0.1em #50e3c2;
+  body.dark-mode .info-video .text-info-video .text-trending {
+    color: #ffffff;
   }
   .tools-recording {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1.8fr 0.2fr;
+        grid-template-columns: 1fr 1.8fr 0.2fr;
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 0px;
-        grid-template-areas: ". steps timer" "lines lines lines" ". buttons-recording .";
+        grid-template-areas: ". steps time" "lines lines lines" ". buttons-recording .";
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: tools-recording;
   }
-  .tools-recording .timer {
+  .tools-recording .time {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
-    grid-area: timer;
-    font-size: 0.8em;
+    grid-area: time;
+    font-size: 1em;
     margin: auto;
     text-transform: uppercase;
   }
-  .tools-recording #text-Rec {
-    text-decoration: underline;
-    -webkit-text-decoration-color: #5ed7c6;
-            text-decoration-color: #5ed7c6;
-    text-decoration-thickness: 0.12em;
+  body.dark-mode .tools-recording .time {
+    color: #ffffff;
   }
   body.dark-mode .tools-recording .step, body.dark-mode
   .tools-recording .button {
@@ -1226,25 +1324,44 @@ body.dark-mode .search-gifos-responde button:hover {
     background-color: #572ee5;
     color: #ffffff;
   }
+  body.dark-mode .steps .active {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+  }
   .step {
     width: 2em;
     height: 2em;
     border-radius: 50%;
     border: solid 0.1em #572ee5;
+    text-align: center;
+    padding: 0.35em;
+    margin-right: 0.5em;
+  }
+  .return-recording {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #5ed7c6;
+            text-decoration-color: #5ed7c6;
+    display: none;
+  }
+  body.dark-mode .return-recording {
+    background-color: #37383c;
+    color: #ffffff;
+    border-color: #ffffff;
   }
   .lines {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: lines;
-    width: 120%;
+    width: 150%;
     margin-left: -10%;
   }
   .buttons-recording {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: buttons-recording;
-    margin-top: -50%;
+    margin-top: -40%;
   }
   .buttons-recording .button {
     text-transform: uppercase;
@@ -1253,14 +1370,78 @@ body.dark-mode .search-gifos-responde button:hover {
     width: 100%;
     font-size: 0.8em;
   }
+  .buttons-recording .record-button,
+  .buttons-recording .stop-button,
+  .buttons-recording .upload-button {
+    display: none;
+  }
   .film-div {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: film-div;
-    margin-left: 20%;
+    margin-left: 40%;
   }
   body.dark-mode .film-div .film {
     content: url("../assets/img/pelicula-modo-noc.svg");
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .camera-div .camera-light {
+    width: 30%;
+  }
+  .info-video {
+    width: 25.25em;
+    height: 20.25em;
+    padding: 1em;
+  }
+  .info-video .text-info-video {
+    width: 22.2em;
+    height: 17.2em;
+    margin-left: -3%;
+  }
+  .info-video .upload-gifo {
+    margin-left: -92%;
+    height: 83%;
+    width: 89%;
+  }
+  .step {
+    margin-right: 1em;
+  }
+  .lines {
+    margin-left: -15%;
+  }
+  .buttons-recording {
+    margin-top: -40%;
+    margin-left: 10%;
+  }
+  .buttons-recording .button {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .camera-div {
+    margin-left: 25%;
+  }
+  .camera-div .camera-light {
+    width: 26%;
+  }
+  .info-video {
+    width: 37.25em;
+    margin-left: 0;
+  }
+  .info-video .text-info-video {
+    width: 34.2em;
+    margin-left: -1%;
+  }
+  .info-video .upload-gifo {
+    margin-left: -78%;
+    height: 83%;
+    width: 59%;
+  }
+  .buttons-recording {
+    margin-top: -20%;
   }
 }
 

@@ -61,6 +61,14 @@
       content: url("../assets/img/icon-search-modo-noct.svg");
     }
   }
+  .clear-search {
+    display: none;
+    img {
+      body.dark-mode & {
+        content: url("../assets/img/close-modo-noct.svg");
+      }
+    }
+  }
 }
 
 .ul-form-search {

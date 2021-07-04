@@ -14,3 +14,87 @@
     color: $txt-fail-responde;
   }
 }
+
+#my-gifos-section-with-content {
+  width: 100%;
+  button {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $font-montserrat;
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 1em;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    border: solid 0.1em $line-color;
+    border-radius: 1.3em;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    body.dark-mode & {
+      color: $white-color;
+      border-color: $white-color;
+    }
+  }
+}
+
+.gifos-list {
+  display: grid;
+  grid-template-columns: 50% 40%;
+  grid-template-rows: 8.5em 8.5em;
+  margin-left: 1em;
+  .div-slider {
+    width: 8em;
+    height: auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gifos-list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 30%;
+    grid-template-rows: 8.5em 8.5em;
+    margin-left: 1.6%;
+    .div-slider {
+      margin-left: 10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .gifos-list {
+    .div-slider {
+      width: 12em;
+      margin-bottom: 1em;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .gifos-list {
+    .div-slider {
+      width: 16em;
+    }
+  }
+}
+
+// .menu-conten {
+//   .myGifo {
+//     color: $link-active-color;
+//     body.dark-mode & {
+//       color: $link-active-color;
+//     }
+//   }
+// }

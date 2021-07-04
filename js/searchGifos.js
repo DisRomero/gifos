@@ -144,8 +144,20 @@ const searchGifos = async (searchText) => {
 
 if (document.getElementById("input-form-search")) {
   search.addEventListener("keyup", (e) => {
-    searchGifos(e.target.value);
+    
+    const clearInput = (e) => {
+      e.preventDefault();
+      search.value='';
+      suggestion.style.display = "none";
+      btnClear.style.display = 'none';
+    }
 
+    searchGifos(e.target.value);
+    const btnClear = document.getElementById('clear-search');
+    btnClear.style.display = 'inline-block';
+    btnClear.addEventListener('click', clearInput)
+
+    
     if (e.target.value === "") {
       suggestion.style.display = "none";
       suggestion.value = "";

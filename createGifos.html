@@ -1,132 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gifos</title>
-    <link rel="stylesheet" href="style/style.css" />
 
-    <!--fuente Montserrat-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crea tu gifos</title>
+  <link rel="stylesheet" href="style/style.css" />
 
-    <!--fuente Roboto-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="line-color"></div>
-      <nav>
-        <div class="logo-container">
-          <a href="index.html">
-            <img class="logo" src="assets/img/logo-mobile.svg" alt="logo" />
+  <!--fuente Montserrat-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" />
+
+  <!--fuente Roboto-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="line-color"></div>
+    <nav>
+      <div class="logo-container">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo-mobile.svg" alt="logo" />
+        </a>
+      </div>
+      <input type="checkbox" id="check" />
+      <label for="check" class="burger-btn">
+        <img src="assets/img/burger.svg" alt="menu" />
+      </label>
+      <ul class="menu-conten">
+        <li>
+          <input type="checkbox" id="color-switch" />
+          <label for="color-switch" id="text-color-switch" class="text-menu-conten">modo nocturno</label>
+        </li>
+        <li>
+          <a class="text-menu-conten" href="favorite.html">favoritos</a>
+        </li>
+        <li>
+          <a class="text-menu-conten" href="myGifo.html">mis GIFOS</a>
+        </li>
+        <li>
+          <a href="createGifos.html">
+            <img class="crear-gifo" src="assets/img/CTA-crear-gifo-active.svg" alt="crear-gifo" />
           </a>
-        </div>
-        <input type="checkbox" id="check" />
-        <label for="check" class="burger-btn">
-          <img src="assets/img/burger.svg" alt="menu" />
-        </label>
-        <ul class="menu-conten">
-          <li>
-            <input type="checkbox" id="color-switch" />
-            <label
-              for="color-switch"
-              id="text-color-switch"
-              class="text-menu-conten"
-              >modo nocturno</label
-            >
-          </li>
-          <li>
-            <a class="text-menu-conten" href="favorite.html">favoritos</a>
-          </li>
-          <li>
-            <a class="text-menu-conten" href="myGifo.html">mis GIFOS</a>
-          </li>
-          <li>
-            <a href="createGifos.html">
-              <img
-                class="crear-gifo"
-                src="assets/img/CTA-crear-gifo-active.svg"
-                alt="crear-gifo"
-              />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header> 
-    <section id="create-gif" class="create-gif">
-      <div id="camera-div" class="camera-div">
-        <img src="./assets/img/camara.svg" alt="camara-de-pelicula" class="camera" />
-        <img src="./assets/img/element-luz-camara.svg" alt="luz-de-camara" class="camera-light" />
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="create-gif" class="create-gif">
+    <div id="camera-div" class="camera-div">
+      <img src="./assets/img/camara.svg" alt="camara-de-pelicula" class="camera" />
+      <img src="./assets/img/element-luz-camara.svg" alt="luz-de-camara" class="camera-light" />
+    </div>
+    <div id="info-video" class="info-video">
+      <div id="text-info-video" class="text-info-video">
+        <p id="title-text" class="text-body">Aquí podrás crear tus propios <span class="uppercase-search-gifos">gifos</span></p>
+        <p id="text-gif" class="text-trending">¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
+        <img id="video-container">
       </div>
-      <div id="video-div" class="video-div">
-        <div id="first-border" class="first-border size"></div>
-        <div id="second-border" class="second-border size"></div>
-        <div id="info-video" class="info-video">
-          <div id="text-info-video" class="text-info-video">
-            <p class="text-body">Aquí podrás crear tus propios <span class="uppercase-search-gifos">gifos</span></p>
-            <p class="text-trending">¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
-          </div>
-          <div id="text-camera-access" class="text-camera-access">
-            <p class="text-body">¿Nos das acceso a tu cámara?</p>
-            <p class="text-trending">El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
+      <div id="upload-gifo" class="upload-gifo">
+        <img src="assets/img/ok.svg" alt="">
+        <p class="text-trending">GIFO subido con éxito.</p>
+      </div>
+    </div>
+    <div id="tools-recording" class="tools-recording">
+      <div id="steps" class="steps">
+        <span id="first-step" class="step">1</span>
+        <span id="second-step" class="step">2</span>
+        <span id="third-step" class="step">3</span>
+      </div>
+      <span id="time" class="time"></span>
+      <button id="return-recording" class="time return-recording">repetir captura</button>
 
-          </div>
-          <div id="video-div" class="video-div"></div>
-          
-        </div>
-        <div id="third-border" class="third-border size"></div>
-        <div id="fourth-border" class="fourth-border size"></div>
-      </div>
-      <div id="tools-recording" class="tools-recording">
-        <div id="steps" class="steps">
-          <button id="first-step" class="first step">1</button>
-          <button id="second-step" class="second step">2</button>
-          <button id="third-step" class="third step">3</button>
-        </div>
-        <div class="line-color lines"></div>
-        <div id="buttons-recording" class="buttons-recording">
-          <button id="star-button" class="button text-body">comenzar</button>
-        </div>   
-      </div>
-      <div id="film-div" class="film-div">
-        <img src="./assets/img/pelicula.svg" alt="cinta-de-pelicula" class="film">
-      </div>
+      <div class="line-color lines"></div>
 
+      <div id="buttons-recording" class="buttons-recording">
+        <button id="star-button" class="button star-button text-body">comenzar</button>
+        <button id="record-button" class="button record-button text-body">grabar</button>
+        <button id="stop-button" class="button stop-button text-body">detener</button>
+        <button id="upload-button" class="button upload-button text-body">subir</button>
+      </div>
+    </div>
+    <div id="film-div" class="film-div">
+      <img src="./assets/img/pelicula.svg" alt="cinta-de-pelicula" class="film">
+    </div>
+
+  </section>
+  <footer>
+    <section class="footer text-trending">
+      <p>Compartir en:</p>
+      <div class="social-network">
+        <a href="https://www.facebook.com/Acamica.org/"><img class="fb" alt="icon_facebook" /></a>
+        <a href="https://twitter.com/acamica_com?lang=en"><img class="tw" alt="icon-twitter" /></a>
+        <a href="https://www.instagram.com/acamica/?hl=en"><img class="ig" alt="icon_instagram" /></a>
+      </div>
+      <p class="copyright text-trending">
+        <span>© gifos 2020</span> all rights reserved.
+      </p>
     </section>
-    <footer>
-      <section class="footer text-trending">
-        <p>Compartir en:</p>
-        <div class="social-network">
-          <a href="https://www.facebook.com/Acamica.org/"
-            ><img class="fb" alt="icon_facebook"
-          /></a>
-          <a href="https://twitter.com/acamica_com?lang=en"
-            ><img class="tw" alt="icon-twitter"
-          /></a>
-          <a href="https://www.instagram.com/acamica/?hl=en"
-            ><img class="ig" alt="icon_instagram"
-          /></a>
-        </div>
-        <p class="copyright text-trending">
-          <span>© gifos 2020</span> all rights reserved.
-        </p>
-      </section>
-      <div class="line-color"></div>
-    </footer>
+    <div class="line-color"></div>
+  </footer>
 
-    <script type="module" src="./js/index.js"></script>
-    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+  <script type="module" src="./js/index.js"></script>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 
-   
-  </body>
+</body>
+
 </html>
